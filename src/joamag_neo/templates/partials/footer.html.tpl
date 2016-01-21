@@ -1,3 +1,5 @@
 <div class="footer-container">
-    <span>&copy; 2008-2016 João Magalhães</span>
+    {% if own.config.footer %}
+        <span>&copy; 2008-2016 João Magalhães</span>
+    {% endif %}
 </div>

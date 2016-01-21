@@ -12,7 +12,8 @@ class JoamagNeoApp(appier.WebApp):
             locales = ("en_us",)
         )
         self.config = dict(
-            cache = not self.is_devel()
+            cache = not self.is_devel(),
+            footer = self.is_devel()
         )
 
 if __name__ == "__main__":

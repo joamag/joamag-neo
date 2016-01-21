@@ -3,6 +3,34 @@
 @import url(animations.css);
 
 @font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 300;
+    src: local("Open Sans Light"), local("OpenSans-Light"), url(../fonts/OpenSans-Light.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Open Sans"), local("OpenSans"), url(../fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    src: local("Open Sans Semi-Bold"), local("OpenSans-Semibold"), url(../fonts/OpenSans-Semibold.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: local("Open Sans Bold"), local("OpenSans-Bold"), url(../fonts/OpenSans-Bold.ttf);
+}
+
+@font-face {
     font-family: "Heuristica";
     font-style: normal;
     font-weight: 400;
@@ -15,7 +43,7 @@ body {
     -ms-animation: fade-into 0.75s ease-in-out;
     -moz-animation: fade-into 0.75s ease-in-out;
     -webkit-animation: fade-into 0.75s ease-in-out;
-    color: #424649;
+    color: #4d4d4d;
     font-family: "Heuristica", Georgia, serif;
     font-size: 100%;
     font-smoothing: antialiased;
@@ -29,7 +57,7 @@ body {
 }
 
 h1 {
-    font-family: "futura-pt", "Helvetica Neue", "Helvetica", sans-serif;
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
     font-size: 28px;
     line-height: 36px;
 }
@@ -38,6 +66,34 @@ p {
     font-size: 14px;
     line-height: 24px;
     margin: 32px 0px 32px 0px;
+}
+
+dl {
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 34px;
+}
+
+dl > dt {
+    color: #8d8d8d;
+    float: left;
+    width: 120px;
+}
+
+a {
+    color: #4d4d4d;
+    text-decoration: none;
+    transition: color 0.25s;
+    -o-transition: color 0.25s;
+    -ms-transition: color 0.25s;
+    -moz-transition: color 0.25s;
+    -webkit-transition: color 0.25s;
+}
+
+a:hover,
+a.hover {
+    color: #0033cc;
 }
 
 img.avatar {
@@ -51,6 +107,7 @@ span.strong {
 }
 
 .footer-container {
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
     font-size: 12px;
     line-height: 18px;
     margin: 32px 0px 32px 0px;
