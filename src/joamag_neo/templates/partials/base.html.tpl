@@ -1,4 +1,4 @@
-{% set type = "business.business" %}
+{% set type = "website" %}
 {% set title = "João Magalhães" %}
 {% set author = "João Magalhães" %}
 {% set description = "Entrepreneur, software developer and technology enthusiast. Co-founder of Hive Solutions and creator of Colony framework." %}
