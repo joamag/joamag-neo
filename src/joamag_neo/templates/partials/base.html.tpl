@@ -1,7 +1,7 @@
 {% set type = "business.business" %}
-{% set title = "Hive Solutions" %}
-{% set author = "Hive Solutions" %}
-{% set description = "Hive Solutions is a next-generation software boutique, built by perfectionists. We keep things simple, and care deeply about what we build, to the core." %}
+{% set title = "João Magalhães" %}
+{% set author = "João Magalhães" %}
+{% set description = "Entrepreneur, software developer and technology enthusiast. Co-founder of Hive Solutions and creator of Colony framework." %}
 {% set keywords = "software development,ios development,full stack development,developers" %}
 {% set street_address = "Rua 31 de Janeiro, 190A 3º Dto." %}
 {% set locality = "Porto" %}
