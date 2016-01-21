@@ -52,8 +52,16 @@ body {
     -webkit-font-smoothing: antialiased;
     line-height: 12px;
     margin: 0px 0px 0px 0px;
-    padding: 60px 0px 0px 60px;
+    padding: 60px 60px 60px 60px;
     text-align: left;
+}
+
+body.tablet-s {
+    padding: 40px 40px 40px 40px;
+}
+
+body.mobile-s {
+    padding: 20px 20px 20px 20px;
 }
 
 h1 {
@@ -73,12 +81,22 @@ dl {
     font-size: 13px;
     font-weight: 600;
     line-height: 34px;
+    margin: 32px 0px 32px 0px;
 }
 
 dl > dt {
     color: #8d8d8d;
     float: left;
     width: 120px;
+}
+
+section:after {
+    background-color: #e9ecef;
+    bottom: 0px;
+    content: "";
+    display: block;
+    height: 1px;
+    width: 60px;
 }
 
 a {
@@ -112,5 +130,5 @@ span.strong {
     font-size: 11px;
     font-weight: 600;
     line-height: 18px;
-    margin: 32px 0px 32px 0px;
+    margin: 32px 0px 0px 0px;
 }
