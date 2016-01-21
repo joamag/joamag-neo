@@ -24,7 +24,7 @@ body {
     -webkit-font-smoothing: antialiased;
     line-height: 12px;
     margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 60px;
+    padding: 60px 0px 0px 60px;
     text-align: left;
 }
 
@@ -38,6 +38,12 @@ p {
     font-size: 14px;
     line-height: 24px;
     margin: 32px 0px 32px 0px;
+}
+
+img.avatar {
+    border-radius: 50px;
+    height: 100px;
+    width: 100px;
 }
 
 span.strong {
