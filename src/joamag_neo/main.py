@@ -11,6 +11,9 @@ class JoamagNeoApp(appier.WebApp):
             name = "joamag_neo",
             locales = ("en_us",)
         )
+        self.config = dict(
+            cache = not self.is_devel()
+        )
 
 if __name__ == "__main__":
     app = JoamagNeoApp()
