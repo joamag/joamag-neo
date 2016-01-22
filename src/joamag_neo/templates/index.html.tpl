@@ -14,7 +14,7 @@
         <dl>
             <dt>Company</dt>
             <dd>
-                <a href="http://hive.pt">Hive Solutions</a>
+                <a href="http://hive.pt" target="_blank">Hive Solutions</a>
             </dd>
             <dt>Email</dt>
             <dd>
@@ -22,11 +22,21 @@
             </dd>
             <dt>GitHub</dt>
             <dd>
-                <a href="http://github.com/joamag">@joamag</a>
+                <a href="http://github.com/joamag" target="_blank">
+                    <span class="weak">github.com/</span>joamag
+                </a>
             </dd>
             <dt>Twitter</dt>
             <dd>
-                <a href="http://twitter.com/joamag">@joamag</a>
+                <a href="http://twitter.com/joamag" target="_blank">
+                    <span class="weak">twitter.com/</span>joamag
+                </a>
+            </dd>
+            <dt>LinkedIn</dt>
+            <dd>
+                <a href="http://linkedin.com/in/joamag" target="_blank">
+                    <span class="weak">linkedin.com/in/</span>joamag
+                </a>
             </dd>
         </dl>
     </section>

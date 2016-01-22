@@ -124,6 +124,16 @@ span.strong {
     background-color: #f8ebdb;
 }
 
+span.weak {
+    color: #8d8d8d;
+    font-weight: 500;
+}
+
+a:hover span.weak,
+a.hover span.weak {
+    color: #4d4d4d;
+}
+
 .footer-container {
     color: #8d8d8d;
     font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
