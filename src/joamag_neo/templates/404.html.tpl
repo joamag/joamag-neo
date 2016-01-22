@@ -1,4 +1,4 @@
-{% extends "partials/layout.en_us.html.tpl" %}
+{% extends "partials/layout.html.tpl" %}
 {% block content %}
     <h1>Page Not Found</h1>
     <p>
