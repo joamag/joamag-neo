@@ -13,7 +13,7 @@ class JoamagNeoApp(appier.WebApp):
         )
         self.config = dict(
             cache = not self.is_devel(),
-            footer = self.is_devel()
+            footer = self.is_devel() or True
         )
 
 if __name__ == "__main__":
