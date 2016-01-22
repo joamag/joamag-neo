@@ -121,6 +121,14 @@ img.avatar {
 }
 
 span.strong {
+    background-color: #dbe9f4;
+}
+
+span.strong.blue {
+    background-color: #dbe9f4;
+}
+
+span.strong.beige {
     background-color: #f8ebdb;
 }
 
