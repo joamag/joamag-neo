@@ -8,6 +8,7 @@
             {% include "partials/analytics.html.tpl" %}
             {% include "partials/meta.html.tpl" %}
             {% include "partials/og.html.tpl" %}
+            {% include "partials/twitter.html.tpl" %}
             <title>{{ title }}{% block title %}{% endblock %}</title>
         {% endblock %}
     </head>
