@@ -115,7 +115,7 @@ a.hover {
 }
 
 img.avatar {
-    border-radius: 50px;
+    border-radius: 50px 50px 50px 50px;
     height: 100px;
     width: 100px;
 }
