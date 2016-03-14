@@ -5,11 +5,12 @@ import appier
 
 class JoamagNeoApp(appier.WebApp):
 
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         appier.WebApp.__init__(
             self,
             name = "joamag_neo",
-            locales = ("en_us",)
+            locales = ("en_us",),
+            *args, **kwargs
         )
         self.config = dict(
             cache = not self.is_devel(),
