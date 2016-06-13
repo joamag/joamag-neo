@@ -138,6 +138,14 @@ span.weak {
     font-weight: 500;
 }
 
+a span {
+    transition: color 0.25s;
+    -o-transition: color 0.25s;
+    -ms-transition: color 0.25s;
+    -moz-transition: color 0.25s;
+    -webkit-transition: color 0.25s;
+}
+
 a:hover span.weak,
 a.hover span.weak {
     color: #4d4d4d;
