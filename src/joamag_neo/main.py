@@ -20,3 +20,5 @@ class JoamagNeoApp(appier.WebApp):
 if __name__ == "__main__":
     app = JoamagNeoApp()
     app.serve()
+else:
+    __path__ = []
