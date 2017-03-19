@@ -120,15 +120,18 @@ img.avatar {
     width: 100px;
 }
 
+a.strong,
 span.strong {
     background-color: #dbe9f4;
     padding: 2px 4px 2px 4px;
 }
 
+a.strong.blue
 span.strong.blue {
     background-color: #dbe9f4;
 }
 
+a.strong.beige,
 span.strong.beige {
     background-color: #f8ebdb;
 }

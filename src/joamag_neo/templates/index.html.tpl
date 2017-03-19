@@ -7,7 +7,8 @@
         <h1>João Magalhães</h1>
         <p>
             Entrepreneur, <span class="strong">software developer</span> and technology enthusiast.<br/>
-            Co-founder of <span class="strong">Hive Solutions</span> and creator of <span class="strong">Colony framework</span>.
+            Co-founder of <a class="strong" href="http://hive.pt">Hive Solutions</a> and creator of
+            <a class="strong" href="http://colony.hive.pt">Colony framework</a>.
         </p>
     </section>
     <section class="links">
