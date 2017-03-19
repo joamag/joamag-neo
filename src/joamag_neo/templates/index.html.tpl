@@ -6,7 +6,7 @@
     <section class="header">
         <h1>João Magalhães</h1>
         <p>
-            Entrepreneur, <span class="strong">software developer</span> and technology enthusiast.<br/>
+            Entrepreneur, software developer and technology enthusiast.<br/>
             Co-founder of <a class="strong" href="http://www.hive.pt">Hive Solutions</a> and
             VP of Engineering at <a class="strong" href="http://www.platforme.com">Platforme</a>.<br/>
             Creator of <a class="strong" href="http://appier.hive.pt">Appier</a>,
