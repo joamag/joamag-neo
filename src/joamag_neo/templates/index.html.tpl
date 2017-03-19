@@ -7,7 +7,10 @@
         <h1>João Magalhães</h1>
         <p>
             Entrepreneur, <span class="strong">software developer</span> and technology enthusiast.<br/>
-            Co-founder of <a class="strong" href="http://hive.pt">Hive Solutions</a> and creator of
+            Co-founder of <a class="strong" href="http://www.hive.pt">Hive Solutions</a> and
+            VP of Engineering at <a class="strong" href="http://www.platforme.com">Platforme</a>.<br/>
+            Creator of <a class="strong" href="http://appier.hive.pt">Appier</a>,
+            <a class="strong" href="http://netius.hive.pt">Netius</a> and
             <a class="strong" href="http://colony.hive.pt">Colony framework</a>.
         </p>
     </section>
