@@ -1,5 +1,6 @@
 FROM ubuntu:latest
 
+LABEL version="1.0"
 LABEL maintainer="João Magalhães <joamag@gmail.com>"
 
 EXPOSE 8080
