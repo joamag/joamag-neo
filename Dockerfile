@@ -1,5 +1,6 @@
 FROM ubuntu:latest
-MAINTAINER João Magalhães
+
+LABEL maintainer="João Magalhães <joamag@gmail.com>"
 
 EXPOSE 8080
 
