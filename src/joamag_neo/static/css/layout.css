@@ -42,13 +42,16 @@ body {
     -o-animation: fade-into 0.75s ease-in-out;
     -ms-animation: fade-into 0.75s ease-in-out;
     -moz-animation: fade-into 0.75s ease-in-out;
+    -khtml-animation: fade-into 0.75s ease-in-out;
     -webkit-animation: fade-into 0.75s ease-in-out;
     color: #4d4d4d;
     font-family: "Heuristica", Georgia, serif;
     font-size: 100%;
     font-smoothing: antialiased;
     -o-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
+    -khtml-font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
     line-height: 12px;
     margin: 0px 0px 0px 0px;
@@ -106,6 +109,7 @@ a {
     -o-transition: color 0.25s;
     -ms-transition: color 0.25s;
     -moz-transition: color 0.25s;
+    -khtml-transition: color 0.25s;
     -webkit-transition: color 0.25s;
 }
 
@@ -116,6 +120,11 @@ a.hover {
 
 img.avatar {
     border-radius: 50px 50px 50px 50px;
+    -o-border-radius: 50px 50px 50px 50px;
+    -ms-border-radius: 50px 50px 50px 50px;
+    -moz-border-radius: 50px 50px 50px 50px;
+    -khtml-border-radius: 50px 50px 50px 50px;
+    -webkit-border-radius: 50px 50px 50px 50px;
     height: 100px;
     width: 100px;
 }
@@ -146,6 +155,7 @@ a span {
     -o-transition: color 0.25s;
     -ms-transition: color 0.25s;
     -moz-transition: color 0.25s;
+    -khtml-transition: color 0.25s;
     -webkit-transition: color 0.25s;
 }
 
