@@ -141,6 +141,10 @@ dl > dt {
     min-width: 120px;
 }
 
+section > *:last-child {
+    margin-bottom: 32px;
+}
+
 section:after {
     background-color: #e9ecef;
     bottom: 0px;
