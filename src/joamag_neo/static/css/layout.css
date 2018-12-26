@@ -39,7 +39,7 @@
 
 body {
     color: #4d4d4d;
-    font-family: "Heuristica", Georgia, serif;
+    font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Open Sans", "Helvetica", "Arial", sans-serif;
     font-size: 100%;
     font-smoothing: antialiased;
     -o-font-smoothing: antialiased;
@@ -73,6 +73,7 @@ body.simplified {
     -moz-animation: fade-into 0.75s ease-in-out;
     -khtml-animation: fade-into 0.75s ease-in-out;
     -webkit-animation: fade-into 0.75s ease-in-out;
+    font-family: "Heuristica", Georgia, serif;
 }
 
 body.wide {
@@ -228,6 +229,16 @@ a span {
 a:hover span.weak,
 a.hover span.weak {
     color: #4d4d4d;
+}
+
+body b,
+body strong {
+    font-weight: 600;
+}
+
+body.simplified b,
+body.simplified strong {
+    font-weight: bold;
 }
 
 ul {
