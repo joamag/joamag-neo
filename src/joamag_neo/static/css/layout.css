@@ -55,6 +55,7 @@ body {
     -webkit-font-smoothing: antialiased;
     line-height: 12px;
     margin: 0px 0px 0px 0px;
+    max-width: 480px;
     padding: 60px 60px 60px 60px;
     text-align: left;
 }
@@ -67,15 +68,53 @@ body.mobile-s {
     padding: 20px 20px 20px 20px;
 }
 
+body.narrow {
+    max-width: 620px;
+}
+
+body.wide {
+    max-width: 820px;
+}
+
+body.ultra-wide {
+    max-width: 1020px;
+}
+
+body.center {
+    margin: 0px auto 0px auto;
+}
+
 h1 {
     font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
     font-size: 28px;
     line-height: 36px;
 }
 
+h2 {
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
+    font-size: 22px;
+    line-height: 28px;
+}
+
+h3 {
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
+    font-size: 17px;
+    line-height: 20px;
+}
+
+h4 {
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
+    font-size: 15px;
+    line-height: 17px;
+}
+
 p {
     font-size: 14px;
     line-height: 26px;
+    margin: 12px 0px 12px 0px;
+}
+
+body.simplified p {
     margin: 32px 0px 32px 0px;
     max-width: 480px;
 }
@@ -91,7 +130,7 @@ dl {
 dl > dt {
     color: #8d8d8d;
     float: left;
-    width: 120px;
+    min-width: 120px;
 }
 
 section:after {
@@ -104,7 +143,8 @@ section:after {
 }
 
 a {
-    color: #4d4d4d;
+    border-bottom: 1px solid transparent;
+    color: #4078c0;
     text-decoration: none;
     transition: color 0.25s;
     -o-transition: color 0.25s;
@@ -116,7 +156,21 @@ a {
 
 a:hover,
 a.hover {
+    border-bottom-color: #4078c0;
+}
+
+body.simplified a {
+    border-bottom: none;
+    color: #4d4d4d;
+}
+
+body.simplified a:hover,
+body.simplified a.hover {
     color: #4078c0;
+}
+
+img {
+    max-width: 100%;
 }
 
 img.avatar {
@@ -130,13 +184,18 @@ img.avatar {
     width: 100px;
 }
 
+img.logo {
+    height: 64px;
+}
+
 a.strong,
-span.strong {
+span.strong,
+code {
     background-color: #dbe9f4;
     padding: 2px 4px 2px 4px;
 }
 
-a.strong.blue
+a.strong.blue,
 span.strong.blue {
     background-color: #dbe9f4;
 }
@@ -163,6 +222,59 @@ a span {
 a:hover span.weak,
 a.hover span.weak {
     color: #4d4d4d;
+}
+
+ul {
+    padding: 0px 0px 0px 18px;
+}
+
+ul li {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 8px 0px 8px 0px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+    box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -khtml-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    display: block;
+    font-size: 14px;
+    line-height: 24px;
+    overflow: auto;
+    width: 100%;
+}
+
+table tr {
+    border-top: 1px solid #c6cbd1;
+}
+
+table td,
+table th {
+    border: 1px solid #dfe2e5;
+    padding: 6px 13px 6px 13px;
+    text-align: center;
+}
+
+code {
+    font-size: 13px;
+}
+
+pre {
+    background-color: #f6f8fa;
+    border-radius: 4px 4px 4px 4px;
+    -o-border-radius: 4px 4px 4px 4px;
+    -ms-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -khtml-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    font-size: 13px;
+    line-height: 18px;
 }
 
 .footer-container {

@@ -7,8 +7,14 @@ class BaseController(appier.Controller):
 
     @appier.route("/", "GET")
     def index(self):
-        return self.template("index.html.tpl")
+        return self.template(
+            "index.html.tpl",
+            mode = "simplified"
+        )
 
     @appier.error_handler(404)
     def not_found_code(self, error):
-        return self.template("404.html.tpl")
+        return self.template(
+            "404.html.tpl",
+            mode = "simplified"
+        )
