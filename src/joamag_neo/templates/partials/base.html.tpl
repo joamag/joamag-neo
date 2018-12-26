@@ -1,15 +1,15 @@
-{% set type = "website" %}
-{% set title = "João Magalhães" %}
-{% set author = "João Magalhães" %}
-{% set description = "Entrepreneur, software developer and technology enthusiast. Co-founder of Hive Solutions and VP of Engineering at Platforme. Creator of Appier, Netius and Colony framework." %}
-{% set keywords = "software development,ios development,full stack development,developers" %}
-{% set twitter = "joamag" %}
-{% set street_address = "Rua 31 de Janeiro, 190A 3º Dto." %}
-{% set locality = "Porto" %}
-{% set postal_code = "4000-542" %}
-{% set country = "Portugal" %}
-{% set latitude = "41.146117" %}
-{% set longitude = "-8.607893" %}
+{% set type = type|default("website", True) %}
+{% set title = title|default("João Magalhães", True) %}
+{% set author = author|default("João Magalhães", True) %}
+{% set description = description|default("Entrepreneur, software developer and technology enthusiast. Co-founder of Hive Solutions and VP of Engineering at Platforme. Creator of Appier, Netius and Colony framework.", True) %}
+{% set keywords = keywords|default("software development,ios development,full stack development,developers", True) %}
+{% set twitter = twitter|default("joamag", True) %}
+{% set street_address = street_address|default("Rua 31 de Janeiro, 190A 3º Dto.", True) %}
+{% set locality = locality|default("Porto", True) %}
+{% set postal_code = postal_code|default("4000-542", True) %}
+{% set country = country|default("Portugal", True) %}
+{% set latitude = latitude|default("41.146117", True) %}
+{% set longitude = longitude|default("-8.607893", True) %}
 {% if htitle %}{% set title = htitle + " - " + title %}{% endif %}
 {% if hdescription %}{% set description = hdescription %}{% endif %}
 {% block html scoped %}{% endblock %}
