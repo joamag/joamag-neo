@@ -38,7 +38,7 @@
 }
 
 body {
-    color: #4d4d4d;
+    color: #2d2d2d;
     font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Open Sans", "Helvetica", "Arial", sans-serif;
     font-size: 100%;
     font-smoothing: antialiased;
@@ -73,6 +73,7 @@ body.simplified {
     -moz-animation: fade-into 0.75s ease-in-out;
     -khtml-animation: fade-into 0.75s ease-in-out;
     -webkit-animation: fade-into 0.75s ease-in-out;
+    color: #4d4d4d;
     font-family: "Heuristica", Georgia, serif;
 }
 
@@ -301,7 +302,7 @@ pre {
 
 input {
     background-color: #f2f2f2;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     border-radius: 6px 6px 6px 6px;
     -o-border-radius: 6px 6px 6px 6px;
     -ms-border-radius: 6px 6px 6px 6px;
@@ -326,17 +327,18 @@ input {
     -khtml-outline: none;
     -webkit-outline: none;
     padding: 2px 14px 2px 14px;
-    transition: width 0.15s ease-out;
-    -o-transition: width 0.15s ease-out;
-    -ms-transition: width 0.15s ease-out;
-    -moz-transition: width 0.15s ease-out;
-    -khtml-transition: width 0.15s ease-out;
-    -webkit-transition: width 0.15s ease-out;
+    transition: width 0.15s ease-out, border-color 0.15s ease-out;
+    -o-transition: width 0.15s ease-out, border-color 0.15s ease-out;
+    -ms-transition: width 0.15s ease-out, border-color 0.15s ease-out;
+    -moz-transition: width 0.15s ease-out, border-color 0.15s ease-out;
+    -khtml-transition: width 0.15s ease-out, border-color 0.15s ease-out;
+    -webkit-transition: width 0.15s ease-out, border-color 0.15s ease-out;
     width: 220px;
 }
 
 input:focus,
 input.focus {
+    border-color: #e2e2e2;
     width: 320px;
 }
 
