@@ -205,6 +205,10 @@ img.logo {
     height: 64px;
 }
 
+img.logo.logo-large {
+    height: 96px;
+}
+
 a.strong,
 span.strong {
     background-color: #dbe9f4;
