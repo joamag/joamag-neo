@@ -14,7 +14,17 @@ class BaseController(appier.Controller):
 
     @appier.error_handler(404)
     def not_found_code(self, error):
+        if self.is_devel(): return False
         return self.template(
             "404.html.tpl",
             mode = "simplified"
+        )
+
+    @appier.exception_handler(BaseException)
+    def base_exception_handle(self, error):
+        if self.is_devel(): return False
+        return self.template(
+            "error.html.tpl",
+            mode = "simplified",
+            error = error
         )
