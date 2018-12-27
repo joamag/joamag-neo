@@ -119,11 +119,12 @@ h4 {
 
 p {
     font-size: 14px;
-    line-height: 26px;
+    line-height: 24px;
     margin: 12px 0px 12px 0px;
 }
 
 body.simplified p {
+    line-height: 26px;
     margin: 32px 0px 32px 0px;
 }
 
