@@ -12,7 +12,7 @@
             <title>{{ title }}{% block title %}{% endblock %}</title>
         {% endblock %}
     </head>
-    <body class="ux wait-load {{ mode }} {% if own.config.colors %}dark{% endif %} {% block body_extras %}{% endblock %}" data-locale="en-us">
+    <body class="ux wait-load {{ mode }} {% block body_extras %}{% endblock %}" data-locale="en-us">
         <div id="header" class="header replace">
             {% block header %}
                 {% include "partials/header.html.tpl" with context %}
