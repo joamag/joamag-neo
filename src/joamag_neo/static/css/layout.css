@@ -50,6 +50,7 @@ body {
     line-height: 12px;
     margin: 0px 0px 0px 0px;
     max-width: 480px;
+    overflow-y: scroll;
     padding: 60px 60px 60px 60px;
     text-align: left;
 }
@@ -75,6 +76,7 @@ body.simplified {
     -webkit-animation: fade-into 0.75s ease-in-out;
     color: #4d4d4d;
     font-family: "Heuristica", Georgia, serif;
+    overflow-y: auto;
 }
 
 body.wide {
