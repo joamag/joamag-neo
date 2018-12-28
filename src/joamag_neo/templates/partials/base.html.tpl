@@ -10,6 +10,8 @@
 {% set country = country|default("Portugal", True) %}
 {% set latitude = latitude|default("41.146117", True) %}
 {% set longitude = longitude|default("-8.607893", True) %}
+{% set copyright = copyright|default("João Magalhães", True) %}
+{% set copyright_year = copyright_year|default("2008-2018", True) %}
 {% if htitle %}{% set title = htitle + " - " + title %}{% endif %}
 {% if hdescription %}{% set description = hdescription %}{% endif %}
 {% block html scoped %}{% endblock %}
