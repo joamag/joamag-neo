@@ -260,6 +260,11 @@ ul {
     padding: 0px 0px 0px 18px;
 }
 
+ul ul,
+ul ul ul {
+    padding-left: 10px;
+}
+
 ul li {
     font-size: 14px;
     line-height: 24px;
