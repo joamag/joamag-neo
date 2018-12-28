@@ -148,6 +148,26 @@ dl > dt {
     min-width: 120px;
 }
 
+form {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+form dl > dt {
+    font-size: 15px;
+    margin-bottom: 8px;
+    margin-top: 12px;
+    min-width: auto;
+}
+
+form dl > dd {
+    margin-left: 0px;
+}
+
+form .button {
+    margin: 0px 8px 0px 8px;
+}
+
 section > *:last-child {
     margin-bottom: 32px;
 }
@@ -320,7 +340,69 @@ pre {
     line-height: 18px;
 }
 
-input {
+input[type=text],
+input[type=number] {
+    background-color: #f2f2f2;
+    border: 2px solid #f2f2f2;
+    border-radius: 6px 6px 6px 6px;
+    -o-border-radius: 6px 6px 6px 6px;
+    -ms-border-radius: 6px 6px 6px 6px;
+    -moz-border-radius: 6px 6px 6px 6px;
+    -khtml-border-radius: 6px 6px 6px 6px;
+    -webkit-border-radius: 6px 6px 6px 6px;
+    box-shadow: 1px 1px 3px #cccccc;
+    -o-box-shadow: 1px 1px 3px #cccccc;
+    -ms-box-shadow: 1px 1px 3px #cccccc;
+    -moz-box-shadow: 1px 1px 3px #cccccc;
+    -khtml-box-shadow: 1px 1px 3px #cccccc;
+    -webkit-box-shadow: 1px 1px 3px #cccccc;
+    box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -khtml-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Open Sans", "Helvetica", "Arial", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    min-height: 44px;
+    outline: none;
+    -o-outline: none;
+    -ms-outline: none;
+    -moz-outline: none;
+    -khtml-outline: none;
+    -webkit-outline: none;
+    padding: 8px 12px 8px 12px;
+    transition: box-shadow 0.15s ease-out;
+    -o-transition: box-shadow 0.15s ease-out;
+    -ms-transition: box-shadow 0.15s ease-out;
+    -moz-transition: box-shadow 0.15s ease-out;
+    -khtml-transition: box-shadow 0.15s ease-out;
+    -webkit-transition: box-shadow 0.15s ease-out;
+    width: 100%;
+}
+
+input[type=text]:focus,
+input[type=number]:focus {
+    box-shadow: 1px 1px 3px #6d6d6d;
+    -o-box-shadow: 1px 1px 3px #6d6d6d;
+    -ms-box-shadow: 1px 1px 3px #6d6d6d;
+    -moz-box-shadow: 1px 1px 3px #6d6d6d;
+    -khtml-box-shadow: 1px 1px 3px #6d6d6d;
+    -webkit-box-shadow: 1px 1px 3px #6d6d6d;
+}
+
+input[type=text]:disabled,
+input[type=number]:disabled {
+    opacity: 0.6;
+    -o-opacity: 0.6;
+    -ms-opacity: 0.6;
+    -moz-opacity: 0.6;
+    -khtml-opacity: 0.6;
+    -webkit-opacity: 0.6;
+}
+
+input[type=text].grow {
     background-color: #f2f2f2;
     border: 1px solid transparent;
     border-radius: 6px 6px 6px 6px;
@@ -329,6 +411,12 @@ input {
     -moz-border-radius: 6px 6px 6px 6px;
     -khtml-border-radius: 6px 6px 6px 6px;
     -webkit-border-radius: 6px 6px 6px 6px;
+    box-shadow: none;
+    -o-box-shadow: none;
+    -ms-box-shadow: none;
+    -moz-box-shadow: none;
+    -khtml-box-shadow: none;
+    -webkit-box-shadow: none;
     box-sizing: border-box;
     -o-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -339,7 +427,7 @@ input {
     font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Open Sans", "Helvetica", "Arial", sans-serif;
     font-size: 14px;
     font-weight: 500;
-    height: 32px;
+    min-height: 32px;
     outline: none;
     -o-outline: none;
     -ms-outline: none;
@@ -356,10 +444,186 @@ input {
     width: 220px;
 }
 
-input:focus,
-input.focus {
+input[type=text].grow:focus,
+input[type=text].grow.focus {
     border-color: #e2e2e2;
+    box-shadow: none;
+    -o-box-shadow: none;
+    -ms-box-shadow: none;
+    -moz-box-shadow: none;
+    -khtml-box-shadow: none;
+    -webkit-box-shadow: none;
     width: 320px;
+}
+
+textarea {
+    background-color: #f2f2f2;
+    border: 2px solid #f2f2f2;
+    border-radius: 6px 6px 6px 6px;
+    -o-border-radius: 6px 6px 6px 6px;
+    -ms-border-radius: 6px 6px 6px 6px;
+    -moz-border-radius: 6px 6px 6px 6px;
+    -khtml-border-radius: 6px 6px 6px 6px;
+    -webkit-border-radius: 6px 6px 6px 6px;
+    box-shadow: 1px 1px 3px #cccccc;
+    -o-box-shadow: 1px 1px 3px #cccccc;
+    -ms-box-shadow: 1px 1px 3px #cccccc;
+    -moz-box-shadow: 1px 1px 3px #cccccc;
+    -khtml-box-shadow: 1px 1px 3px #cccccc;
+    -webkit-box-shadow: 1px 1px 3px #cccccc;
+    box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -khtml-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Open Sans", "Helvetica", "Arial", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    min-height: 180px;
+    outline: none;
+    -o-outline: none;
+    -ms-outline: none;
+    -moz-outline: none;
+    -khtml-outline: none;
+    -webkit-outline: none;
+    padding: 8px 12px 8px 12px;
+    transition: box-shadow 0.15s ease-out;
+    -o-transition: box-shadow 0.15s ease-out;
+    -ms-transition: box-shadow 0.15s ease-out;
+    -moz-transition: box-shadow 0.15s ease-out;
+    -khtml-transition: box-shadow 0.15s ease-out;
+    -webkit-transition: box-shadow 0.15s ease-out;
+    width: 100%;
+}
+
+textarea:focus {
+    box-shadow: 1px 1px 3px #6d6d6d;
+    -o-box-shadow: 1px 1px 3px #6d6d6d;
+    -ms-box-shadow: 1px 1px 3px #6d6d6d;
+    -moz-box-shadow: 1px 1px 3px #6d6d6d;
+    -khtml-box-shadow: 1px 1px 3px #6d6d6d;
+    -webkit-box-shadow: 1px 1px 3px #6d6d6d;
+}
+
+.button-float {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 45px 45px 45px 45px;
+    -o-border-radius: 45px 45px 45px 45px;
+    -ms-border-radius: 45px 45px 45px 45px;
+    -moz-border-radius: 45px 45px 45px 45px;
+    -khtml-border-radius: 45px 45px 45px 45px;
+    -webkit-border-radius: 45px 45px 45px 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    -khtml-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    color: #7f7f7d;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Open Sans", "Helvetica", "Arial", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    height: 45px;
+    letter-spacing: 2.5px;
+    line-height: 45px;
+    outline: none;
+    -o-outline: none;
+    -ms-outline: none;
+    -moz-outline: none;
+    -khtml-outline: none;
+    -webkit-outline: none;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -khtml-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    width: 140px;
+}
+
+body.simplified .button-float {
+    color: #7f7f7d;
+}
+
+.button-float:hover,
+.button-float.hover {
+    background-color: #7f7f7d;
+    border-bottom: none;
+    box-shadow: 0px 15px 20px rgba(127, 127, 125, 0.4);
+    -o-box-shadow: 0px 15px 20px rgba(127, 127, 125, 0.4);
+    -ms-box-shadow: 0px 15px 20px rgba(127, 127, 125, 0.4);
+    -moz-box-shadow: 0px 15px 20px rgba(127, 127, 125, 0.4);
+    -khtml-box-shadow: 0px 15px 20px rgba(127, 127, 125, 0.4);
+    -webkit-box-shadow: 0px 15px 20px rgba(127, 127, 125, 0.4);
+    color: #ffffff;
+    padding-bottom: 0px;
+    transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -khtml-transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+}
+
+body.simplified .button-float:hover,
+body.simplified .button-float.hover {
+    color: #ffffff;
+}
+
+.button-float.button-float-blue {
+    color: #6bbab5;
+}
+
+.button-float.button-float-blue:hover {
+    background-color: #6bbab5;
+    box-shadow: 0px 15px 20px rgba(107, 186, 181, 0.4);
+    -o-box-shadow: 0px 15px 20px rgba(107, 186, 181, 0.4);
+    -ms-box-shadow: 0px 15px 20px rgba(107, 186, 181, 0.4);
+    -moz-box-shadow: 0px 15px 20px rgba(107, 186, 181, 0.4);
+    -khtml-box-shadow: 0px 15px 20px rgba(107, 186, 181, 0.4);
+    -webkit-box-shadow: 0px 15px 20px rgba(107, 186, 181, 0.4);
+    color: #ffffff;
+}
+
+.button-float.button-float-green {
+    color: #00cc98;
+}
+
+.button-float.button-float-green:hover {
+    background-color: #00cc98;
+    box-shadow: 0px 15px 20px rgba(0, 204, 152, 0.4);
+    -o-box-shadow: 0px 15px 20px rgba(0, 204, 152, 0.4);
+    -ms-box-shadow: 0px 15px 20px rgba(0, 204, 152, 0.4);
+    -moz-box-shadow: 0px 15px 20px rgba(0, 204, 152, 0.4);
+    -khtml-box-shadow: 0px 15px 20px rgba(0, 204, 152, 0.4);
+    -webkit-box-shadow: 0px 15px 20px rgba(0, 204, 152, 0.4);
+    color: #ffffff;
+}
+
+.button-float.button-float-red {
+    color: #c9463d;
+}
+
+.button-float.button-float-red:hover {
+    background-color: #c9463d;
+    box-shadow: 0px 15px 20px rgba(201, 70, 61, 0.4);
+    -o-box-shadow: 0px 15px 20px rgba(201, 70, 61, 0.4);
+    -ms-box-shadow: 0px 15px 20px rgba(201, 70, 61, 0.4);
+    -moz-box-shadow: 0px 15px 20px rgba(201, 70, 61, 0.4);
+    -khtml-box-shadow: 0px 15px 20px rgba(201, 70, 61, 0.4);
+    -webkit-box-shadow: 0px 15px 20px rgba(201, 70, 61, 0.4);
+    color: #ffffff;
+}
+
+.button-float.button-float-small {
+    height: 38px;
+    line-height: 38px;
 }
 
 .above {
