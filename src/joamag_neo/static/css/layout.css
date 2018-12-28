@@ -340,9 +340,11 @@ pre {
     line-height: 18px;
 }
 
-input[type=text],
+input[type=url],
 input[type=date],
 input[type=file],
+input[type=text],
+input[type=email],
 input[type=number] {
     background-color: #f2f2f2;
     border: 2px solid #f2f2f2;
@@ -384,9 +386,11 @@ input[type=number] {
     width: 100%;
 }
 
-input[type=text]:focus,
+input[type=url]:focus,
 input[type=date]:focus,
 input[type=file]:focus,
+input[type=text]:focus,
+input[type=email]:focus,
 input[type=number]:focus {
     box-shadow: 1px 1px 3px #6d6d6d;
     -o-box-shadow: 1px 1px 3px #6d6d6d;
@@ -396,9 +400,11 @@ input[type=number]:focus {
     -webkit-box-shadow: 1px 1px 3px #6d6d6d;
 }
 
-input[type=text]:disabled,
+input[type=url]:disabled,
 input[type=date]:disabled,
 input[type=file]:disabled,
+input[type=text]:disabled,
+input[type=email]:disabled,
 input[type=number]:disabled {
     opacity: 0.6;
     -o-opacity: 0.6;
