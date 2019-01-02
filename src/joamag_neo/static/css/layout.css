@@ -160,6 +160,10 @@ form dl > dt {
     min-width: auto;
 }
 
+form dl > dt:first-child {
+    margin-top: 0px;
+}
+
 form dl > dd {
     margin-left: 0px;
 }
