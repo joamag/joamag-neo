@@ -8,7 +8,7 @@
         <p>
             Entrepreneur, software developer and technology enthusiast.<br/>
             Co-founder of <a class="strong" href="http://www.hive.pt" target="_blank">Hive Solutions</a> and
-            Chief Technical Officer at <a class="strong" href="http://www.platforme.com" target="_blank">Platforme</a>.<br/>
+            Chief Technology Officer at <a class="strong" href="http://www.platforme.com" target="_blank">Platforme</a>.<br/>
             Creator of <a class="strong" href="http://appier.hive.pt" target="_blank">Appier</a>,
             <a class="strong" href="http://netius.hive.pt" target="_blank">Netius</a> and
             <a class="strong" href="http://colony.hive.pt" target="_blank">Colony framework</a>.
