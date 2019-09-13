@@ -12,6 +12,13 @@ class BaseController(appier.Controller):
             mode = "simplified"
         )
 
+    @appier.route("/keybase.txt", "GET")
+    def keybase(self):
+        return self.template(
+            "keybase.txt.tpl",
+            content_type = "text/plain"
+        )
+
     @appier.error_handler(404)
     def not_found_code(self, error):
         if self.is_devel(): return False
