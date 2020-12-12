@@ -30,6 +30,12 @@
                     <span class="weak">github.com/</span>joamag
                 </a>
             </dd>
+            <dt>GitLab</dt>
+            <dd>
+                <a href="http://gitlab.com/joamag" target="_blank">
+                    <span class="weak">gitlab.com/</span>joamag
+                </a>
+            </dd>
             <dt>Twitter</dt>
             <dd>
                 <a href="http://twitter.com/joamag" target="_blank">
