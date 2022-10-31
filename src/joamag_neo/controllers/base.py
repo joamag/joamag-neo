@@ -12,6 +12,13 @@ class BaseController(appier.Controller):
             mode = "simplified"
         )
 
+    @appier.route("/robots.txt", "GET")
+    def robots(self):
+        return self.template(
+            "robots.txt.tpl",
+            content_type = "text/plain"
+        )
+
     @appier.route("/keybase.txt", "GET")
     def keybase(self):
         return self.template(
