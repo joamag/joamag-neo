@@ -26,7 +26,7 @@
         </div>
     </body>
     <footer>
-        {% include "partials/includes.low.html.tpl" %}
+        {% include "partials/includes.footer.html.tpl" %}
     </footer>
     {% include "partials/end_doctype.html.tpl" %}
 {% endblock %}
