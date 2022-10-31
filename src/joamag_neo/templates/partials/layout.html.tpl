@@ -25,5 +25,8 @@
             {% endblock %}
         </div>
     </body>
+    <footer>
+        {% include "partials/includes.low.html.tpl" %}
+    </footer>
     {% include "partials/end_doctype.html.tpl" %}
 {% endblock %}

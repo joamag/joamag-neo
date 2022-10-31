@@ -1,7 +1,7 @@
 {% extends "partials/layout.html.tpl" %}
 {% block content %}
     <div class="above">
-        <img class="avatar" src="{{ url_for('static', filename = 'images/avatar_neo.png') }}" />
+        <img class="avatar" alt="avatar" src="{{ url_for('static', filename = 'images/avatar_neo.png') }}" />
     </div>
     <section class="header">
         <h1>João Magalhães</h1>
