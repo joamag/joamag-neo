@@ -17,6 +17,15 @@ class JoamagNeoApp(appier.WebApp):
             footer = self.is_devel() or True
         )
 
+    def _version(self):
+        return "1.0.0"
+
+    def _description(self):
+        return "João Magalhães"
+
+    def _observations(self):
+        return "João Magalhães's website"
+
 if __name__ == "__main__":
     app = JoamagNeoApp()
     app.serve()
