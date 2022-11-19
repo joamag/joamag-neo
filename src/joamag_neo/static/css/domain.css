@@ -1,12 +1,1 @@
 @charset "utf-8";
-
-p.highlight {
-    border: 1px solid #cdcdcd;
-    border-radius: 8px 8px 8px 8px;
-    -o-border-radius: 8px 8px 8px 8px;
-    -ms-border-radius: 8px 8px 8px 8px;
-    -moz-border-radius: 8px 8px 8px 8px;
-    -khtml-border-radius: 8px 8px 8px 8px;
-    -webkit-border-radius: 8px 8px 8px 8px;
-    padding: 10px 14px 10px 14px;
-}
