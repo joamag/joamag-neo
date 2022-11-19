@@ -1,5 +1,6 @@
 {% extends "partials/layout.html.tpl" %}
 {% block content %}
+    {% set name = config.conf("NAME")|default("João Magalhães", True) %}
     {% set email = config.conf("EMAIL")|default("joao@joao.me", True) %}
     {% set github = config.conf("GITHUB")|default("joamag", True) %}
     {% set gitlab = config.conf("GITLAB")|default("joamag", True) %}
@@ -9,7 +10,7 @@
         <img class="avatar" alt="avatar" src="{{ url_for('static', filename = 'images/avatar_neo.png') }}" />
     </div>
     <section class="header">
-        <h1>João Magalhães</h1>
+        <h1>{{ name }}</h1>
         <p>
             Entrepreneur, software engineer and technology enthusiast.<br/>
             Co-founder of <a class="strong" href="http://www.hive.pt" target="_blank">Hive Solutions</a> and
@@ -20,7 +21,7 @@
         </p>
         <p class="highlight">
             I'm always looking for new challenges and opportunities.<br/>
-            Wanna get in touch ping me at <a class="strong" href="mailto:{{ email }}">{{ email }}</a>.
+            Want to get in touch? Ping me at <a class="strong" href="mailto:{{ email }}?subject=Hey {{ name }}, let's have a chat">{{ email }}</a>.
         </p>
     </section>
     <section class="links">
