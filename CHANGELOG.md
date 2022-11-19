@@ -19,6 +19,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 * Some of the profile outdated information
 
+## [1.1.2] - 2022-11-19
+
+### Fixed
+
+* Some of the profile outdated information
+
 ## [1.1.1] - 2022-11-19
 
 ### Changed
