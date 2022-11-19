@@ -13,12 +13,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-* More flexibility in page data configuration
-* New call to action for opportunities
+*
 
 ### Fixed
 
 *
+
+## [1.1.0] - 2022-11-19
+
+### Changed
+
+* More flexibility in page data configuration
+* New call to action for opportunities
 
 ## [1.0.1] - 2022-11-19
 
