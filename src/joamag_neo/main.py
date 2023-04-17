@@ -18,7 +18,7 @@ class JoamagNeoApp(appier.WebApp):
         )
 
     def _version(self):
-        return "1.1.2"
+        return "1.2.0"
 
     def _description(self):
         return "João Magalhães"
