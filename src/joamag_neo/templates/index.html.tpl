@@ -13,7 +13,8 @@
         <h1>{{ name }}</h1>
         <p>
             Entrepreneur, software engineer and technology enthusiast.<br/>
-            Co-founder of <a class="strong" href="http://www.hive.pt" target="_blank">Hive Solutions</a> and
+            Co-founder of <a class="strong" href="http://www.hive.pt" target="_blank">Hive Solutions</a>, and
+            Principal Engineer at <a class="strong" href="http://www.amplemarket.com" target="_blank">Amplemarket</a>, previously
             Chief Technology Officer at <a class="strong" href="http://www.platforme.com" target="_blank">Platforme</a>.<br/>
             Creator of <a class="strong" href="https://github.com/hivesolutions/appier" target="_blank">Appier</a>,
             <a class="strong" href="https://github.com/hivesolutions/netius" target="_blank">Netius</a> and

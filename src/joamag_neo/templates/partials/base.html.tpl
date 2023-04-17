@@ -1,7 +1,7 @@
 {% set type = type|default("website", True) %}
 {% set title = title|default("João Magalhães", True) %}
 {% set author = author|default("João Magalhães", True) %}
-{% set description = description|default("Entrepreneur, software engineer and technology enthusiast. Co-founder of Hive Solutions and Chief Technology Officer at Platforme. Creator of Appier, Netius and Colony framework.", True) %}
+{% set description = description|default("Entrepreneur, software engineer and technology enthusiast. Co-founder of Hive Solutions, and Principal Engineer at Amplemarket, previously Chief Technology Officer at Platforme. Creator of Appier, Netius and Colony framework.", True) %}
 {% set keywords = keywords|default("software development,ios development,full stack development,developers", True) %}
 {% set twitter = twitter|default("joamag", True) %}
 {% set street_address = street_address|default("Rua 31 de Janeiro, 190A 3º Dto.", True) %}
