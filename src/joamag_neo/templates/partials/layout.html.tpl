@@ -1,4 +1,13 @@
 {% extends "partials/base.html.tpl" %}
+{% macro menu(section) -%}
+    <div class="menu">
+        <ul>
+            <li><a class="simple {% if section == 'about' %}active{% endif %}" href="/">About</a></li>
+            <li><a class="simple {% if section == 'blog' %}active{% endif %}" href="/blog">Blog</a></li>
+            <li><a class="simple {% if section == 'resume' %}active{% endif %}" target="_blank" href="https://resume.joao.me">Resumé</a></li>
+        </ul>
+    </div>
+{%- endmacro %}
 {% block html %}
     {% include "partials/doctype.html.tpl" %}
     <head>

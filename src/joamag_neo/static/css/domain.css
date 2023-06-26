@@ -64,3 +64,56 @@ body.simplified .menu ul {
 body.simplified .menu ul a.active {
     font-weight: 600;
 }
+
+@media (prefers-color-scheme: dark) {
+    html {
+        background: #1d1d1d;
+    }
+
+    dl > dt {
+        color: #f0f0f0;
+    }
+
+    span.weak {
+        color: #f0f0f0;
+    }
+
+    a:hover span.weak,
+    a.hover span.weak {
+        color: #f0f0f0;
+    }
+
+    .footer-container {
+        color: #f0f0f0;
+    }
+
+    body.simplified {
+        color: #ffffff;
+    }
+
+    body.simplified a {
+        color: #ffffff;
+    }
+
+    body.simplified a:hover {
+        border-bottom: 1px solid #ffffff;
+        color: #ffffff;
+    }
+
+    body.simplified .blog a.simple,
+    body.simplified .header a.simple {
+        border-bottom: 1px solid #ffffff;
+        color: #ffffff;
+    }
+
+    body.simplified .blog a.simple.active,
+    body.simplified .header a.simple.active {
+        font-weight: 600;
+    }
+
+    body.simplified .blog a.simple:hover,
+    body.simplified .header a.simple:hover {
+        border-bottom: 1px solid #ffffff;
+        color: #ffffff;
+    }
+}

@@ -1,12 +1,6 @@
 {% extends "partials/layout.html.tpl" %}
 {% block content %}
-    <div class="menu">
-        <ul>
-            <li><a class="simple" href="/">About</a></li>
-            <li><a class="simple active" href="/blog">Blog</a></li>
-            <li><a class="simple" href="#">Resumé</a></li>
-        </ul>
-    </div>
+    {{ menu("blog") }}
     <section class="title">
         <h1>Supercharging my Telegram group with the help of ChatGPT</h1>
     </section>

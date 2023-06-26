@@ -6,13 +6,7 @@
     {% set gitlab = config.conf("GITLAB")|default("joamag", True) %}
     {% set linkedin = config.conf("LINKEDIN")|default("joamag", True) %}
     {% set twitter = config.conf("TWITTER")|default("joamag", True) %}
-    <div class="menu">
-        <ul>
-            <li><a class="simple active" href="/">About</a></li>
-            <li><a class="simple" href="/blog">Blog</a></li>
-            <li><a class="simple" target="_blank" href="https://resume.joao.me">Resumé</a></li>
-        </ul>
-    </div>
+    {{ menu("about") }}
     <div class="above">
         <img class="avatar" alt="avatar" src="{{ url_for('static', filename = 'images/avatar_neo.png') }}" />
     </div>
