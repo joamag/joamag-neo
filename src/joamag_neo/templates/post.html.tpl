@@ -27,8 +27,7 @@
         <p>
             Here's the core part of that code:
         </p>
-        <pre>
-# src/bot/summarizer/main.py
+        <pre># src/bot/summarizer/main.py
 
 LLM_CHAT = ChatOpenAI()
 
@@ -80,8 +79,7 @@ CONVERSATION BLOCK END
 
     logger.info("\nResponse:\n {}", response)
 
-    return response
-        </pre>
+    return response</pre>
         <p>
             Most of my friends really liked the /resume command. Some however, showed concerns regarding AI and how these things are super scary. After those comments, one thing was obvious: I needed to build something even funnier.
         </p>

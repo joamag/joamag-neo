@@ -10,20 +10,20 @@ code {
 
 pre {
     background: #f8f8f8;
-    border-radius: 4px 4px 4px 4px;
-    -o-border-radius: 4px 4px 4px 4px;
-    -ms-border-radius: 4px 4px 4px 4px;
-    -moz-border-radius: 4px 4px 4px 4px;
-    -khtml-border-radius: 4px 4px 4px 4px;
-    -webkit-border-radius: 4px 4px 4px 4px;
+    border-radius: 8px 8px 8px 8px;
+    -o-border-radius: 8px 8px 8px 8px;
+    -ms-border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    -khtml-border-radius: 8px 8px 8px 8px;
+    -webkit-border-radius: 8px 8px 8px 8px;
     box-shadow: none;
     -o-box-shadow: none;
     -ms-box-shadow: none;
     -moz-box-shadow: none;
     -khtml-box-shadow: none;
     -webkit-box-shadow: none;
-    overflow: hidden;
-    padding: 12px 12px 12px 12px;
+    overflow: scroll;
+    padding: 16px 18px 16px 18px;
 }
 
 body.wide {
