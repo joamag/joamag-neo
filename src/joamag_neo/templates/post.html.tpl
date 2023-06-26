@@ -1,11 +1,18 @@
 {% extends "partials/layout.html.tpl" %}
 {% block content %}
+    <div class="menu">
+        <ul>
+            <li><a class="simple" href="/">About</a></li>
+            <li><a class="simple active" href="/blog">Blog</a></li>
+            <li><a class="simple" href="#">Resumé</a></li>
+        </ul>
+    </div>
     <section class="title">
         <h1>Supercharging my Telegram group with the help of ChatGPT</h1>
     </section>
-    <section class="content">
+    <section class="blog">
         <p>
-            While most people in Europe use WhatsApp, my group of friends and I use Telegram. For years now we've used things like <a target="_blank" href="https://combot.org/">Combot</a> to see who's more silent than usual, and MissRose to give our monthly elected group admins moderation rights. Yeah, we take friendship that seriously.
+            While most people in Europe use WhatsApp, my group of friends and I use Telegram. For years now we've used things like <a class="simple" target="_blank" href="https://combot.org/">Combot</a> to see who's more silent than usual, and MissRose to give our monthly elected group admins moderation rights. Yeah, we take friendship that seriously.
             But now we have access to LLMs right? So I decided to build two new features for our group chat. One is pretty useful, and the other.. Well, you be the judge.
         </p>
         <h2>Summarize the conversation with /resume</h2>

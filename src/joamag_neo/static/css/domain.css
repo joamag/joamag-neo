@@ -4,17 +4,63 @@ body.wide {
     width: 700px;
 }
 
-body.simplified .content p {
-    font-size: 15px;
-    line-height: 30px;
-    margin: 27px 0px 27px 0px;
+body.simplified {
+    animation: none;
+    -o-animation: none;
+    -ms-animation: none;
+    -moz-animation: none;
+    -khtml-animation: none;
+    -webkit-animation: none;
 }
 
-body.simplified .content a {
+body.simplified .blog p {
+    font-size: 15px;
+    line-height: 30px;
+    margin: 28px 0px 28px 0px;
+}
+
+body.simplified .header p {
+    font-size: 15px;
+    line-height: 32px;
+    margin: 30px 0px 30px 0px;
+}
+
+body.simplified .blog a.simple,
+body.simplified .header a.simple {
     border-bottom: 1px solid #000000;
     color: #000000;
 }
 
-body.simplified .content a:hover {
+body.simplified .blog a.simple.active,
+body.simplified .header a.simple.active {
+    font-weight: 600;
+}
+
+body.simplified .blog a.simple:hover,
+body.simplified .header a.simple:hover {
+    border-bottom: 1px solid #4078c0;
     color: #4078c0;
+}
+
+body.simplified .menu {
+    margin-left: -154px;
+    position: fixed;
+    top: 70px;
+    width: 150px;
+}
+
+body.tablet-s.simplified .menu,
+body.mobile-s.simplified .menu {
+    right: 20px;
+    text-align: right;
+    top: 0px;
+}
+
+body.simplified .menu ul {
+    list-style: none;
+    padding: 0px 0px 0px 0px;
+}
+
+body.simplified .menu ul a.active {
+    font-weight: 600;
 }
