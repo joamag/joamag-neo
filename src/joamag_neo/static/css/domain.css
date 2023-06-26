@@ -1,5 +1,31 @@
 @charset "utf-8";
 
+code {
+    background-color: initial;
+    border: initial;
+    display: initial;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+pre {
+    background: #f8f8f8;
+    border-radius: 4px 4px 4px 4px;
+    -o-border-radius: 4px 4px 4px 4px;
+    -ms-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -khtml-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    box-shadow: none;
+    -o-box-shadow: none;
+    -ms-box-shadow: none;
+    -moz-box-shadow: none;
+    -khtml-box-shadow: none;
+    -webkit-box-shadow: none;
+    overflow: hidden;
+    padding: 12px 12px 12px 12px;
+}
+
 body.wide {
     width: 700px;
 }
@@ -16,7 +42,7 @@ body.simplified {
 body.simplified .blog p {
     font-size: 15px;
     line-height: 30px;
-    margin: 28px 0px 28px 0px;
+    margin: 23px 0px 23px 0px;
 }
 
 body.simplified .header p {
@@ -65,9 +91,18 @@ body.simplified .menu ul a.active {
     font-weight: 600;
 }
 
+body.simplified .image-container {
+    text-align: center;
+}
+
 @media (prefers-color-scheme: dark) {
     html {
         background: #1d1d1d;
+    }
+
+    pre {
+        background: #2d2d2d;
+        color: #ffffff;
     }
 
     dl > dt {
