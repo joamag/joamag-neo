@@ -1,1 +1,20 @@
 @charset "utf-8";
+
+body.wide {
+    width: 700px;
+}
+
+body.simplified .content p {
+    font-size: 15px;
+    line-height: 30px;
+    margin: 27px 0px 27px 0px;
+}
+
+body.simplified .content a {
+    border-bottom: 1px solid #000000;
+    color: #000000;
+}
+
+body.simplified .content a:hover {
+    color: #4078c0;
+}

@@ -12,6 +12,13 @@ class BaseController(appier.Controller):
             mode = "simplified"
         )
 
+    @appier.route("/post", "GET")
+    def post(self):
+        return self.template(
+            "post.html.tpl",
+            mode = "simplified narrow center"
+        )
+
     @appier.route("/robots.txt", "GET")
     def robots(self):
         return self.template(
