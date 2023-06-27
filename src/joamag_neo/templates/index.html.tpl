@@ -6,6 +6,7 @@
     {% set gitlab = config.conf("GITLAB")|default("joamag", True) %}
     {% set linkedin = config.conf("LINKEDIN")|default("joamag", True) %}
     {% set twitter = config.conf("TWITTER")|default("joamag", True) %}
+    {{ menu("about") }}
     <div class="above">
         <img class="avatar" alt="avatar" src="{{ url_for('static', filename = 'images/avatar_neo.png') }}" />
     </div>
@@ -13,16 +14,16 @@
         <h1>{{ name }}</h1>
         <p>
             Entrepreneur, software engineer and technology enthusiast.<br/>
-            Co-founder of <a class="strong" href="http://www.hive.pt" target="_blank">Hive Solutions</a>, and
-            Principal Engineer at <a class="strong" href="http://www.amplemarket.com" target="_blank">Amplemarket</a>, previously
-            Chief Technology Officer at <a class="strong" href="http://www.platforme.com" target="_blank">Platforme</a>.<br/>
-            Creator of <a class="strong" href="https://github.com/hivesolutions/appier" target="_blank">Appier</a>,
-            <a class="strong" href="https://github.com/hivesolutions/netius" target="_blank">Netius</a> and
-            <a class="strong" href="https://github.com/hivesolutions/colony" target="_blank">Colony framework</a>.
+            Co-founder of <a class="simple" href="http://www.hive.pt" target="_blank">Hive Solutions</a>, and
+            Principal Engineer at <a class="simple" href="http://www.amplemarket.com" target="_blank">Amplemarket</a>.<br/>
+            Previously Co-founder and Chief Technology Officer at <a class="simple" href="http://www.platforme.com" target="_blank">Platforme</a>.<br/>
+            Creator of <a class="simple" href="https://github.com/hivesolutions/appier" target="_blank">Appier</a>,
+            <a class="simple" href="https://github.com/hivesolutions/netius" target="_blank">Netius</a> and
+            <a class="simple" href="https://github.com/hivesolutions/colony" target="_blank">Colony framework</a>.
         </p>
         <p class="highlight">
             I'm always looking for new challenges and opportunities.<br/>
-            Want to get in touch? Ping me at <a class="strong" href="mailto:{{ email }}?subject=Hey {{ name }}, let's have a chat">{{ email }}</a>.
+            Want to get in touch? Ping me at <a class="simple" href="mailto:{{ email }}?subject=Hey {{ name }}, let's have a chat">{{ email }}</a>.
         </p>
     </section>
     <section class="links">

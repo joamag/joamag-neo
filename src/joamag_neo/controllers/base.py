@@ -9,7 +9,21 @@ class BaseController(appier.Controller):
     def index(self):
         return self.template(
             "index.html.tpl",
-            mode = "simplified"
+            mode = "simplified narrow center"
+        )
+
+    @appier.route("/blog", "GET")
+    def blog(self):
+        return self.template(
+            "blog.html.tpl",
+            mode = "simplified narrow center"
+        )
+
+    @appier.route("/post", "GET")
+    def post(self):
+        return self.template(
+            "post.html.tpl",
+            mode = "simplified narrow center"
         )
 
     @appier.route("/robots.txt", "GET")

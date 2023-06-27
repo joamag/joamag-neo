@@ -1,1 +1,154 @@
 @charset "utf-8";
+
+code {
+    background-color: initial;
+    border: initial;
+    display: initial;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+pre {
+    background: #f8f8f8;
+    border-radius: 8px 8px 8px 8px;
+    -o-border-radius: 8px 8px 8px 8px;
+    -ms-border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    -khtml-border-radius: 8px 8px 8px 8px;
+    -webkit-border-radius: 8px 8px 8px 8px;
+    box-shadow: none;
+    -o-box-shadow: none;
+    -ms-box-shadow: none;
+    -moz-box-shadow: none;
+    -khtml-box-shadow: none;
+    -webkit-box-shadow: none;
+    overflow: auto;
+    padding: 16px 18px 16px 18px;
+}
+
+body.wide {
+    width: 700px;
+}
+
+body.simplified {
+    animation: none;
+    -o-animation: none;
+    -ms-animation: none;
+    -moz-animation: none;
+    -khtml-animation: none;
+    -webkit-animation: none;
+}
+
+body.simplified .blog p {
+    font-size: 15px;
+    line-height: 30px;
+    margin: 23px 0px 23px 0px;
+}
+
+body.simplified .header p {
+    font-size: 15px;
+    line-height: 32px;
+    margin: 30px 0px 30px 0px;
+}
+
+body.simplified .blog a.simple,
+body.simplified .header a.simple {
+    border-bottom: 1px solid #000000;
+    color: #000000;
+}
+
+body.simplified .blog a.simple.active,
+body.simplified .header a.simple.active {
+    font-weight: 600;
+}
+
+body.simplified .blog a.simple:hover,
+body.simplified .header a.simple:hover {
+    border-bottom: 1px solid #4078c0;
+    color: #4078c0;
+}
+
+body.simplified .menu {
+    margin-left: -154px;
+    position: fixed;
+    top: 70px;
+    width: 150px;
+}
+
+body.tablet-s.simplified .menu,
+body.mobile-s.simplified .menu {
+    right: 20px;
+    text-align: right;
+    top: 0px;
+}
+
+body.simplified .menu ul {
+    list-style: none;
+    padding: 0px 0px 0px 0px;
+}
+
+body.simplified .menu ul a.active {
+    font-weight: 600;
+}
+
+body.simplified .image-container {
+    text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        background: #1d1d1d;
+    }
+
+    pre {
+        background: #2d2d2d;
+        color: #ffffff;
+    }
+
+    dl > dt {
+        color: #f0f0f0;
+    }
+
+    span.weak {
+        color: #f0f0f0;
+    }
+
+    a:hover span.weak,
+    a.hover span.weak {
+        color: #f0f0f0;
+    }
+
+    .footer-container {
+        color: #f0f0f0;
+    }
+
+    body.simplified {
+        color: #ffffff;
+    }
+
+    body.simplified a {
+        color: #ffffff;
+    }
+
+    body.simplified a:hover {
+        border-bottom: 1px solid #ffffff;
+        color: #ffffff;
+    }
+
+    body.simplified .blog a.simple,
+    body.simplified .header a.simple {
+        border-bottom: 1px solid #ffffff;
+        color: #ffffff;
+    }
+
+    body.simplified .blog a.simple.active,
+    body.simplified .header a.simple.active {
+        font-weight: 600;
+    }
+
+    body.simplified .blog a.simple:hover,
+    body.simplified .header a.simple:hover {
+        border-bottom: 1px solid #ffffff;
+        color: #ffffff;
+    }
+}
