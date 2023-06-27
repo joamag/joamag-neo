@@ -9,7 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-*
+* New UI
+* Blog support, controlled by feature flag
+* Feature control
 
 ### Changed
 
