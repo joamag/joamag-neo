@@ -22,7 +22,7 @@ pre {
     -moz-box-shadow: none;
     -khtml-box-shadow: none;
     -webkit-box-shadow: none;
-    overflow: scroll;
+    overflow: auto;
     padding: 16px 18px 16px 18px;
 }
 
