@@ -8,3 +8,9 @@ The new website for João Magalhães.
 * Cool and typographic based UI
 * Blog support out of the box
 * Easy to maintain and evolve
+
+## Configuration
+
+| Name         | Type   | Default               | Description                                    |
+| ------------ | ------ | --------------------- | ---------------------------------------------- |
+| **FEATURES** | `list` | `["about", "resume"]` | The features that are enabled for the website. |
