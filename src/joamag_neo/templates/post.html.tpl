@@ -81,7 +81,7 @@ CONVERSATION BLOCK END
 
     return response</pre>
         <p>
-            Most of my friends really liked the /resume command. Some however, showed concerns regarding AI and how these things are super scary. After those comments, one thing was obvious: I needed to build something even funnier.
+            Most of my friends really liked the <code>/resume</code> command. Some however, showed concerns regarding AI and how these things are super scary. After those comments, one thing was obvious: I needed to build something even funnier.
         </p>
         <h2>Impersonate a user with <code>/fake @username</code></h2>
         <p>

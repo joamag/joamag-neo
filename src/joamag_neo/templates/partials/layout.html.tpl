@@ -4,7 +4,7 @@
         <ul>
             <li><a class="simple {% if section == 'about' %}active{% endif %}" href="/">About</a></li>
             <li><a class="simple {% if section == 'blog' %}active{% endif %}" href="/blog">Blog</a></li>
-            <li><a class="simple {% if section == 'resume' %}active{% endif %}" target="_blank" href="https://resume.joao.me">Resumé</a></li>
+            <li><a class="simple {% if section == 'resume' %}active{% endif %}" target="_blank" href="https://resume.joao.me">Résumé</a></li>
         </ul>
     </div>
 {%- endmacro %}
