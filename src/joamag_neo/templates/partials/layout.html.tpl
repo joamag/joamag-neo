@@ -1,5 +1,5 @@
 {% extends "partials/base.html.tpl" %}
-{% set features = config.conf("FEATURES", ["about", "resume"], cast = list) %}
+{% set features = config.conf("FEATURES", ["about", "blog", "resume"], cast = list) %}
 {% macro menu(section) -%}
     <div class="menu">
         <ul>

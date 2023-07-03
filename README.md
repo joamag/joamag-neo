@@ -11,6 +11,6 @@ The new website for João Magalhães.
 
 ## Configuration
 
-| Name         | Type   | Default               | Description                                    |
-| ------------ | ------ | --------------------- | ---------------------------------------------- |
-| **FEATURES** | `list` | `["about", "resume"]` | The features that are enabled for the website. |
+| Name         | Type   | Default                       | Description                                    |
+| ------------ | ------ | ----------------------------- | ---------------------------------------------- |
+| **FEATURES** | `list` | `["about", "blog", "resume"]` | The features that are enabled for the website. |

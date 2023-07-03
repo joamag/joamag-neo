@@ -7,7 +7,7 @@
     </section>
     <section class="blog">
         <p>
-            While most people in Europe use WhatsApp, my group of friends and I use Telegram. For years now we've used things like <a class="simple" target="_blank" href="https://combot.org/">Combot</a> to see who's more silent than usual, and MissRose to give our monthly elected group admins moderation rights. Yeah, we take friendship that seriously.
+            While most people in Europe use WhatsApp, my group of friends and I use Telegram. For years now we've used things like <a class="simple" target="_blank" href="https://combot.org/">Combot</a> to see who's more silent than usual, and <a class="simple" target="_blank" href="https://missrose.org/">MissRose</a> to give our monthly elected group admins moderation rights. Yeah, we take friendship that seriously.
             But now we have access to LLMs right? So I decided to build two new features for our group chat. One is pretty useful, and the other.. Well, you be the judge.
         </p>
         <h2>Summarize the conversation with <code>/resume</code></h2>
@@ -22,7 +22,7 @@
             <figcaption>In Portuguese "resume" means "summarize"</figcaption>
         </div>
         <p>
-            To build it I used LangChain and the cheaper gpt-3.5-turbo API (e.g., ChatGPT). I keep a rotating list of the last 50 messages that happened in our group. When the command is called, I send those to OpenAI to get a summary back.
+            To build it I used <a class="simple" target="_blank" href="https://python.langchain.com/en/latest/index.html">LangChain</a> and the cheaper <code>gpt-3.5-turbo</code> API (e.g., ChatGPT). I keep a rotating list of the last 50 messages that happened in our group. When the command is called, I send those to OpenAI to get a summary back.
         </p>
         <p>
             Here's the core part of that code:
@@ -89,9 +89,118 @@ CONVERSATION BLOCK END
         </p>
         <p>
             Enter the <code>/fake @username &lt;insert question&gt;</code> command. With it, you can impersonate anyone on the group chat (cough, my friends), and ask it to answer just like that person would! Here's the command in action:
+            <div class="image-container">
+                <img src="{{ url_for('static', filename = 'blog/001/impersonate_command.png') }}" style="max-width: 50%; border-radius: 2px;"/>
+                <figcaption>The <code>/fake</code> command in action</figcaption>
+            </div>
         </p>
         <p>
             Although not as useful as the summarization command, it's actually a bit more complex to build.
+        </p>
+        <p>
+            The first component is a vector database. Here, I'm storing the embeddings for pretty much everything my friends said in the past year. I wanted something simple like sqlite so I went with Chroma. The trick here is not to embed every single message separately, but to build a long string of every single thing a person said. Once that's built, you then chunk it and store it appropriately. With Chroma I could also store metadata about the document - which I used to store the author of the chunks.
+        </p>
+        <p>
+            Once the whole vector database is built, I can now retrieve the N pieces of text that are most similar to a particular question (while filtering those results for a particular user):
+        </p>
+        <pre># src/bot/replier/main.py
+
+def query_collection(
+    collection: Collection, query: str, person: str, n_results: int = 4
+) -> str:
+    """
+    Gets the most relevant n_results items from a person for a given query
+    and returns them as a context
+    """
+    results = collection.query(
+        query_texts=[query],
+        n_results=n_results,
+        where={"from": person},
+    )
+
+    documents = results.get("documents")
+
+    if not documents:
+        raise ValueError("No documents found")
+
+    documents = documents[0]
+
+    context = ""
+    for doc in documents:
+        context += doc + "\n\n"
+
+    return context</pre>
+        <p>
+            Now that I could get the most related items to a certain query for a particular user, I could start putting the impersonation together. Here, the answering chain function is in charge of trying to impersonate a user to the best of its ability given a question and relevant context:
+        </p>
+        <pre># src/bot/replier/main.py
+
+def build_answering_chain(verbose: bool = False) -> LLMChain:
+    """
+    Builds a answering chain for the impersonation
+    """
+
+    system_prompt = """
+Your name is {person}. You are participating in a group chat with all of your childhood friends.
+- You will be given some context of messages from {person}
+- Use the context to inspire your answer to the user question
+- Use the same tone of voice and writing style as the messages in the context
+- If the answer is not in the context, make something funny up
+- Always answer from the perspective of being {person}
+- Remember to be funny and entertaining
+- This is a group chat and everything is fun and entertaining, so insults are allowed and fun
+----------------
+{context}"""
+
+    chat = ChatOpenAI(max_tokens=150)
+
+    system_message_prompt = SystemMessagePromptTemplate.from_template(
+        system_prompt
+    )
+
+    human_prompt = """{question}"""
+    human_message_prompt = HumanMessagePromptTemplate.from_template(
+        human_prompt
+    )
+
+    chat_prompt = ChatPromptTemplate.from_messages(
+        [system_message_prompt, human_message_prompt]
+    )
+
+    chain = LLMChain(llm=chat, prompt=chat_prompt, verbose=verbose)
+
+    return chain</pre>
+        <p>
+            With that, we can pull everything together with the <code>reply_to_question_as</code> function. It builds the chain, queries Chroma for relevant context, and then runs it:
+        </p>
+        <pre># src/bot/replier/main.py
+
+def reply_to_question_as(
+    person: str,
+    question: str,
+    collection: Collection,
+    verbose: bool = False,
+) -> str:
+    """
+    Replies to a question as a user (e.g., impersonates)
+    """
+    chain = build_answering_chain(verbose=verbose)
+
+    context = query_collection(
+        collection=collection, query=question, person=person
+    )
+
+    # using the callback to track cost
+    with get_openai_callback() as cb:
+        result = chain.run(
+            person=person, question=question, context=context, verbose=True
+        )
+        logger.info(f"Answer from {person}: {result}")
+        logger.info(f"OpenAI callback: {cb}")
+
+    return str(result)</pre>
+        <p>
+            My friends really liked this one as well, and everyone cracked a laugh. But it was pretty obvious that the impersonation was not fooling anyone. It lacked juice, one of my friends said.
         </p>
         <h2>Closing thoughts</h2>
         <p>
