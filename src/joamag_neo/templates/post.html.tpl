@@ -204,7 +204,7 @@ def reply_to_question_as(
         </p>
         <h2>Closing thoughts</h2>
         <p>
-            Both of these two bots were pretty fun to build, and python-telegram-bot makes building the whole thing so easy. It's basically a python script running on my server.
+            Both of these two bots were pretty fun to build, and <a class="simple" target="_blank" href="https://python-telegram-bot.org/"><code>python-telegram-bot</code></a> makes building the whole thing so easy. It's basically a python script running <a class="simple" target="_blank" href="http://localhost:8000/blog/down-from-the-cloud-self-hosting.html">on my server</a>.
         </p>
         <p>
             The summarization feature was an instant success. It's simple, straightforward, and my friends loved it. The feedback to the impersonation feature was.. a bit of a mixed bag. Even though the model can accurately respond to a question with some relevant items to the person its impersonating, it's not really credible. It's missing the juice.
@@ -213,7 +213,7 @@ def reply_to_question_as(
             What is the juice, you ask, my dear reader? The juice is the voice of the person it's trying to impersonate. The juice is the reason why when you ask ChatGPT to design something it looks pretty ugly. The juice is the creativity, the originality!
         </p>
         <p>
-            (and of course, privacy concerns, here's my mention of them)
+            <em>(and of course, privacy concerns, here's my mention of them)</em>
         </p>
     </section>
 {% endblock %}
