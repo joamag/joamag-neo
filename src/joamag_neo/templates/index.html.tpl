@@ -13,7 +13,7 @@
     <section class="header">
         <h1>{{ name }}</h1>
         <p>
-            Entrepreneur, software engineer and technology enthusiast.<br/>
+            Old school software engineer and technology enthusiast.<br/>
             Co-founder of <a class="simple" href="http://www.hive.pt" target="_blank">Hive Solutions</a>, and
             Principal Engineer at <a class="simple" href="http://www.amplemarket.com" target="_blank">Amplemarket</a>.<br/>
             Previously Co-founder and Chief Technology Officer at <a class="simple" href="http://www.platforme.com" target="_blank">Platforme</a>.<br/>
