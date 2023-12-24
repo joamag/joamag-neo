@@ -14,7 +14,7 @@
         <h1>{{ name }}</h1>
         <p>
             Old school software engineer and technology enthusiast.<br/>
-            Co-founder of <a class="simple" href="http://www.hive.pt" target="_blank">Hive Solutions</a>.<br/>
+            Co-founder and Chief Executive Officer at <a class="simple" href="http://www.hive.pt" target="_blank">Hive Solutions</a>.<br/>
             Previously Co-founder and Chief Technology Officer at <a class="simple" href="http://www.platforme.com" target="_blank">Platforme</a>.<br/>
             Creator of <a class="simple" href="https://github.com/hivesolutions/appier" target="_blank">Appier</a>,
             <a class="simple" href="https://github.com/hivesolutions/netius" target="_blank">Netius</a> and
