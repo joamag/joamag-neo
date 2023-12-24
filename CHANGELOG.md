@@ -13,11 +13,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-* Removed reference to Amplemarket
+*
 
 ### Fixed
 
 *
+
+## [1.3.3] - 2023-12-24
+
+### Changed
+
+* Removed reference to Amplemarket
 
 ## [1.3.2] - 2023-11-04
 
