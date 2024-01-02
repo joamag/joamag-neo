@@ -11,7 +11,7 @@
 {% set latitude = latitude|default("41.146117", True) %}
 {% set longitude = longitude|default("-8.607893", True) %}
 {% set copyright = owner.copyright|default(copyright, True)|default("João Magalhães", True) %}
-{% set copyright_year = owner.copyright_year|default(copyright_year, True)|default("2008-2023", True) %}
+{% set copyright_year = owner.copyright_year|default(copyright_year, True)|default("2008-2024", True) %}
 {% if htitle %}{% set title = htitle + " - " + title %}{% endif %}
 {% if hdescription %}{% set description = hdescription %}{% endif %}
 {% block html scoped %}{% endblock %}
