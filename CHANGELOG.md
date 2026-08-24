@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Bluesky, Keybase and résumé links in the contacts list
 * Projects list featuring Appier, Netius, Colony and Boytacean
 * Machine readable site summary for AI agents
+* Apache License, Version 2.0
 
 ### Changed
 
@@ -20,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Analytics upgraded to Google Analytics 4, disabled unless configured
 * Twitter links replaced by X
 * Many more website details are now configurable
+* Container image now based on the official Python image
 
 ### Fixed
 
