@@ -1,10 +1,10 @@
 {% set type = type|default("website", True) %}
-{% set title = title|default("João Magalhães", True) %}
-{% set author = author|default("João Magalhães", True) %}
+{% set name = config.conf("NAME")|default("João Magalhães", True) %}
+{% set title = title|default(name, True) %}
+{% set author = author|default(name, True) %}
 {% set description = description|default("Old school software engineer and technology enthusiast. Co-founder and Chief Executive Officer at Hive Solutions, previously Co-founder and Chief Technology Officer at Platforme. Creator of Appier, Netius and Colony framework.", True) %}
 {% set keywords = keywords|default("software development,ios development,full stack development,developers", True) %}
-{% set twitter = twitter|default("joamag", True) %}
-{% set name = config.conf("NAME")|default("João Magalhães", True) %}
+{% set twitter = config.conf("TWITTER")|default("joamag", True) %}
 {% set email = config.conf("EMAIL")|default("joao@joao.me", True) %}
 {% set github = config.conf("GITHUB")|default("joamag", True) %}
 {% set gitlab = config.conf("GITLAB")|default("joamag", True) %}
