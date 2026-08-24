@@ -12,7 +12,7 @@ class JoamagNeoApp(appier.WebApp):
         self.config = dict(cache=not self.is_devel(), footer=self.is_devel() or True)
 
     def _version(self):
-        return "1.5.0"
+        return "1.5.1"
 
     def _description(self):
         return "João Magalhães"
