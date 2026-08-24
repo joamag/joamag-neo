@@ -14,10 +14,10 @@
 
 ## Projects
 
-- [Appier](https://github.com/hivesolutions/appier): Python web framework.
-- [Netius](https://github.com/hivesolutions/netius): Python asynchronous networking library.
-- [Colony](https://github.com/hivesolutions/colony): Plugin based component framework.
-- [Boytacean](https://github.com/joamag/boytacean): Game Boy emulator written in Rust.
+- [Appier](https://github.com/hivesolutions/appier): WSGI and ASGI Python web framework, with batteries included.
+- [Netius](https://github.com/hivesolutions/netius): Asynchronous networking library with everything imaginable.
+- [Colony](https://github.com/hivesolutions/colony): A Python plugin based component framework.
+- [Boytacean](https://github.com/joamag/boytacean): Fast and safe Game Boy emulator written in Rust.
 
 ## Contact
 
