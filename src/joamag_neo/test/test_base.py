@@ -61,6 +61,20 @@ class BaseTest(unittest.TestCase):
         self.assertNotEqual(result.find("<title>Joao Magalhaes</title>"), -1)
         self.assertNotEqual(result.find('name="author" content="Joao Magalhaes"'), -1)
 
+    def test_index_handle(self):
+        self.assertNotEqual(self.index.find("<h3>@joamag</h3>"), -1)
+
+        appier.conf_s("HANDLE", "joaomagalhaes")
+        try:
+            result = self.app.template(
+                "index.html.tpl", mode="simplified narrow center"
+            )
+        finally:
+            appier.conf_r("HANDLE")
+
+        self.assertNotEqual(result.find("<h3>@joaomagalhaes</h3>"), -1)
+        self.assertEqual(result.find("<h3>@joamag</h3>"), -1)
+
     def test_index_socials(self):
         self.assertNotEqual(self.index.find('href="https://github.com/joamag"'), -1)
         self.assertNotEqual(self.index.find('href="https://gitlab.com/joamag"'), -1)

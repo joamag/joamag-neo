@@ -15,6 +15,7 @@ The new website for João Magalhães.
 | ---------------- | ------ | ------------------------------------------------------------------------------ | -------------------------------------------------------------- |
 | **FEATURES**     | `list` | `["about", "blog", "projects", "resume"]`                                      | The features that are enabled for the website.                 |
 | **NAME**         | `str`  | `João Magalhães`                                                               | The name of the owner of the website.                          |
+| **HANDLE**       | `str`  | `joamag`                                                                       | The handle shown above the navigation menu.                    |
 | **EMAIL**        | `str`  | `joao@joao.me`                                                                 | The email used for the contact links.                          |
 | **GITHUB**       | `str`  | `joamag`                                                                       | The GitHub handle.                                             |
 | **GITLAB**       | `str`  | `joamag`                                                                       | The GitLab handle.                                             |
