@@ -78,8 +78,6 @@ body.simplified .header a.simple:hover {
 }
 
 body.simplified .menu {
-    backdrop-filter: saturate(180%) blur(18px);
-    -webkit-backdrop-filter: saturate(180%) blur(18px);
     background: rgba(255, 255, 255, 0.55);
     border-radius: 12px 12px 12px 12px;
     -o-border-radius: 12px 12px 12px 12px;
@@ -88,16 +86,22 @@ body.simplified .menu {
     -khtml-border-radius: 12px 12px 12px 12px;
     -webkit-border-radius: 12px 12px 12px 12px;
     box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -khtml-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     margin-left: -166px;
     padding: 6px 12px 10px 12px;
     position: fixed;
     top: 70px;
     width: 150px;
+    backdrop-filter: sepia(8%);
+    -webkit-backdrop-filter: sepia(8%);
 }
 
 body.tablet-s.simplified .menu,
 body.mobile-s.simplified .menu {
-    left: 20px;
     margin-left: 0px;
     right: 20px;
     text-align: right;
