@@ -1,3 +1,7 @@
+<!-- preconnect inclusion -->
+<link rel="preconnect" href="https://libs.bemisc.com" crossorigin />
+<link rel="preconnect" href="https://ajax.googleapis.com" crossorigin />
+
 <!-- css inclusion -->
 <link rel="stylesheet" type="text/css" href="{{ touch('//libs.bemisc.com/uxf/css/ux-min.css') }}" />
 <link rel="stylesheet" type="text/css" href="{{ touch('//libs.bemisc.com/layout/css/layout.typo.css') }}" />

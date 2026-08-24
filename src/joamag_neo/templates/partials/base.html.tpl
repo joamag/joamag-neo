@@ -1,13 +1,26 @@
 {% set type = type|default("website", True) %}
 {% set title = title|default("João Magalhães", True) %}
 {% set author = author|default("João Magalhães", True) %}
-{% set description = description|default("Old school software engineer and technology enthusiast. Co-founder of Hive Solutions, and Principal Engineer at Amplemarket, previously Chief Technology Officer at Platforme. Creator of Appier, Netius and Colony framework.", True) %}
+{% set description = description|default("Old school software engineer and technology enthusiast. Co-founder and Chief Executive Officer at Hive Solutions, previously Co-founder and Chief Technology Officer at Platforme. Creator of Appier, Netius and Colony framework.", True) %}
 {% set keywords = keywords|default("software development,ios development,full stack development,developers", True) %}
 {% set twitter = twitter|default("joamag", True) %}
+{% set name = config.conf("NAME")|default("João Magalhães", True) %}
+{% set email = config.conf("EMAIL")|default("joao@joao.me", True) %}
+{% set github = config.conf("GITHUB")|default("joamag", True) %}
+{% set gitlab = config.conf("GITLAB")|default("joamag", True) %}
+{% set linkedin = config.conf("LINKEDIN")|default("joamag", True) %}
+{% set bluesky = config.conf("BLUESKY")|default("joamag.bsky.social", True) %}
+{% set keybase = config.conf("KEYBASE")|default("joamag", True) %}
+{% set job_title = config.conf("JOB_TITLE")|default("Co-founder and Chief Executive Officer", True) %}
+{% set company = config.conf("COMPANY")|default("Hive Solutions", True) %}
+{% set company_url = config.conf("COMPANY_URL")|default("https://www.hive.pt", True) %}
+{% set analytics_id = config.conf("ANALYTICS_ID")|default("", True) %}
+{% set knows_about = config.conf("KNOWS_ABOUT", ["Python", "Rust", "Web Frameworks", "Software Architecture", "Open Source"], cast = list) %}
 {% set street_address = street_address|default("Rua 31 de Janeiro, 190A 3º Dto.", True) %}
 {% set locality = locality|default("Porto", True) %}
 {% set postal_code = postal_code|default("4000-542", True) %}
 {% set country = country|default("Portugal", True) %}
+{% set country_code = country_code|default("PT", True) %}
 {% set latitude = latitude|default("41.146117", True) %}
 {% set longitude = longitude|default("-8.607893", True) %}
 {% set copyright = owner.copyright|default(copyright, True)|default("João Magalhães", True) %}
