@@ -7,3 +7,5 @@ session.shelve*
 /.vscode/settings.json
 
 /.venv
+
+/.playwright-mcp

@@ -47,6 +47,10 @@
                     <a href="mailto:{{ email }}">{{ email }}</a>
                 </dd>
             {% endif %}
+        </dl>
+    </section>
+    <section class="links">
+        <dl>
             {% for social in socials %}
                 {% if social.handle %}
                     <dt>{{ social.label }}</dt>
