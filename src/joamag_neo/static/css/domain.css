@@ -51,6 +51,11 @@ body.simplified .header p {
     margin: 30px 0px 30px 0px;
 }
 
+body.simplified .blog p.condensed,
+body.simplified .header p.condensed {
+    line-height: 28px;
+}
+
 body.simplified .blog a.simple,
 body.simplified .header a.simple {
     border-bottom: 1px solid #000000;

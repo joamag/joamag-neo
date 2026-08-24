@@ -16,6 +16,12 @@
 {% set company_url = config.conf("COMPANY_URL")|default("https://www.hive.pt", True) %}
 {% set analytics_id = config.conf("ANALYTICS_ID")|default("", True) %}
 {% set knows_about = config.conf("KNOWS_ABOUT", ["Python", "Rust", "Web Frameworks", "Software Architecture", "Open Source"], cast = list) %}
+{% set projects = [
+    {"label": "Appier", "prefix": "github.com/hivesolutions/", "handle": "appier", "description": "WSGI & ASGI Python web framework, with batteries included", "year": "2013"},
+    {"label": "Netius", "prefix": "github.com/hivesolutions/", "handle": "netius", "description": "Asynchronous networking library with everything imaginable", "year": "2014"},
+    {"label": "Colony", "prefix": "github.com/hivesolutions/", "handle": "colony", "description": "Plugin based component framework", "year": "2011"},
+    {"label": "Boytacean", "prefix": "github.com/joamag/", "handle": "boytacean", "description": "A fast Game Boy emulator written in Rust", "year": "2022"}
+] %}
 {% set street_address = street_address|default("Rua 31 de Janeiro, 190A 3º Dto.", True) %}
 {% set locality = locality|default("Porto", True) %}
 {% set postal_code = postal_code|default("4000-542", True) %}
