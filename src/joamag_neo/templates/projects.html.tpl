@@ -8,8 +8,8 @@
             Open source I build and maintain, mostly Python with a detour into Rust.
             Some of these have been around for well over a decade and still get commits
             most weeks, quietly running in production somewhere.<br/>
-            Everything lives on GitHub, so feel free to dig through the code,
-            open an issue or send a pull request.
+            Everything lives on <a class="simple" href="https://github.com/joamag" target="_blank" rel="noopener">GitHub</a>,
+            so feel free to dig through the code, open an issue or send a pull request.
         </p>
     </section>
     <section class="links">
