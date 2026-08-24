@@ -1,5 +1,6 @@
 {% extends "partials/base.html.tpl" %}
 {% set features = config.conf("FEATURES", ["about", "blog", "resume"], cast = list) %}
+{% set resume = config.conf("RESUME")|default("resume.joao.me", True) %}
 {% macro menu(section) -%}
     <div class="menu">
         <ul>
@@ -10,7 +11,7 @@
                 <li><a class="simple {% if section == 'blog' %}active{% endif %}" href="/blog">Blog</a></li>
             {% endif %}
             {% if "resume" in features %}
-                <li><a class="simple {% if section == 'resume' %}active{% endif %}" target="_blank" href="https://resume.joao.me">Résumé</a></li>
+                <li><a class="simple {% if section == 'resume' %}active{% endif %}" target="_blank" rel="noopener" href="https://{{ resume }}">Résumé</a></li>
             {% endif %}
         </ul>
     </div>
@@ -25,6 +26,7 @@
             {% include "partials/meta.html.tpl" %}
             {% include "partials/og.html.tpl" %}
             {% include "partials/twitter.html.tpl" %}
+            {% include "partials/schema.html.tpl" %}
             <title>{{ title }}{% block title %}{% endblock %}</title>
         {% endblock %}
     </head>

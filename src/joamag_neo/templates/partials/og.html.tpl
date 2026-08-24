@@ -2,8 +2,12 @@
 <meta property="og:site_name" content="{{ title }}" />
 <meta property="og:title" content="{{ title }}" />
 <meta property="og:description" content="{{ description }}" />
+<meta property="og:locale" content="en_US" />
 <meta property="og:url" content="{{ url_for('location', absolute = True) }}" />
 <meta property="og:image" content="{{ url_for('static', filename = 'images/avatar_neo.png', absolute = True, touch = False) }}" />
+<meta property="og:image:width" content="256" />
+<meta property="og:image:height" content="256" />
+<meta property="og:image:alt" content="{{ name }}" />
 <meta property="business:contact_data:street_address" content="{{ street_address }}" />
 <meta property="business:contact_data:locality" content="{{ locality }}" />
 <meta property="business:contact_data:postal_code" content="{{ postal_code }}" />

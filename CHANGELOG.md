@@ -9,15 +9,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-*
+* Structured data to improve search engine and AI discovery
+* Bluesky, Keybase and résumé links in the contacts list
+* Projects list featuring Appier, Netius, Colony and Boytacean
+* Machine readable site summary for AI agents
+* Apache License, Version 2.0
 
 ### Changed
 
 * Code format to be compliant with [Black](https://github.com/psf/black)
+* Analytics upgraded to Google Analytics 4, disabled unless configured
+* Twitter links replaced by X
+* Many more website details are now configurable
+* Container image now based on the official Python image
 
 ### Fixed
 
-*
+* Outdated role description used in search results and social previews
+* Contact subject line broken in some email clients
+* Insecure and unsafe external links
 
 ## [1.3.3] - 2023-12-24
 

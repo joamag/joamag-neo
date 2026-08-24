@@ -1,0 +1,60 @@
+name: Docker Workflow
+on:
+  push:
+    branches-ignore:
+      - none
+    tags:
+      - "*"
+    paths:
+      - "**"
+  workflow_dispatch:
+jobs:
+  build:
+    name: Build
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code from repository
+        uses: actions/checkout@v7
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v4
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v4
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Set tag name based on branch
+        id: set_tag
+        run: |
+          if [[ "${{ github.ref_name }}" == "master" ]]; then
+            VERSION=$(grep -A 1 "def _version" src/joamag_neo/main.py | grep return | sed 's/.*"\(.*\)".*/\1/')
+            echo "tag=$VERSION" >> $GITHUB_OUTPUT
+          else
+            GITHUB_REFNAME=${{ github.ref_name }}
+            BRANCH_NAME=${GITHUB_REFNAME//\//_}
+            echo "tag=$BRANCH_NAME" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Build and push
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          file: Dockerfile
+          platforms: linux/amd64,linux/arm64/v8
+          push: true
+          tags: joamag/joamag_neo:${{ steps.set_tag.outputs.tag }}
+          provenance: true
+          sbom: true
+
+      - name: Trigger joamag-neo deployment
+        if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/')
+        uses: hivesolutions/deploy-action@v1
+        with:
+          repository: hivesolutions/infra-bemisc
+          service: joamag-neo
+          group: personal
+          tag: ${{ github.ref_name }}
+          token: ${{ secrets.INFRA_DEPLOY_PAT }}
