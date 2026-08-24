@@ -19,7 +19,7 @@
 {% set projects = [
     {"label": "Appier", "prefix": "github.com/hivesolutions/", "handle": "appier", "description": "WSGI & ASGI Python web framework, with batteries included", "year": "2013"},
     {"label": "Netius", "prefix": "github.com/hivesolutions/", "handle": "netius", "description": "Asynchronous networking library with everything imaginable", "year": "2014"},
-    {"label": "Colony", "prefix": "github.com/hivesolutions/", "handle": "colony", "description": "A Python plugin based component framework", "year": "2011"},
+    {"label": "Colony", "prefix": "github.com/hivesolutions/", "handle": "colony", "description": "OSGi inspired Python plugin based component framework", "year": "2011"},
     {"label": "Boytacean", "prefix": "github.com/joamag/", "handle": "boytacean", "description": "Fast and safe Game Boy emulator written in Rust", "year": "2022"}
 ] %}
 {% set street_address = street_address|default("Rua 31 de Janeiro, 190A 3º Dto.", True) %}
