@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-*
+* Content no longer shifts sideways when moving between pages
 
 ## [1.5.1] - 2026-08-24
 
