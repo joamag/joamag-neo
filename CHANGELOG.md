@@ -9,8 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-* Dedicated projects page, controlled by a feature flag
-* Handle shown above the navigation menu
+*
 
 ### Changed
 
@@ -19,6 +18,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 *
+
+## [1.5.0] - 2026-08-24
+
+### Added
+
+* Dedicated projects page, controlled by a feature flag
+* Handle shown above the navigation menu
+
+### Changed
+
+* Blog page now opens with a short introduction
+* Home page no longer lists the projects
+* Fewer contact links on the home page
 
 ## [1.4.0] - 2026-08-24
 
