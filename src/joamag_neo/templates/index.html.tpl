@@ -4,16 +4,8 @@
         {"label": "GitHub", "prefix": "github.com/", "handle": github},
         {"label": "GitLab", "prefix": "gitlab.com/", "handle": gitlab},
         {"label": "LinkedIn", "prefix": "linkedin.com/in/", "handle": linkedin},
-        {"label": "X", "prefix": "x.com/", "handle": twitter},
-        {"label": "Bluesky", "prefix": "bsky.app/profile/", "handle": bluesky},
-        {"label": "Keybase", "prefix": "keybase.io/", "handle": keybase},
-        {"label": "Résumé", "prefix": "", "handle": resume}
-    ] %}
-    {% set projects = [
-        {"label": "Appier", "prefix": "github.com/hivesolutions/", "handle": "appier"},
-        {"label": "Netius", "prefix": "github.com/hivesolutions/", "handle": "netius"},
-        {"label": "Colony", "prefix": "github.com/hivesolutions/", "handle": "colony"},
-        {"label": "Boytacean", "prefix": "github.com/joamag/", "handle": "boytacean"}
+        {"label": "X (Twitter)", "prefix": "x.com/", "handle": twitter},
+        {"label": "Bluesky", "prefix": "", "handle": bluesky}
     ] %}
     {{ menu("about") }}
     <div class="above">
@@ -60,18 +52,6 @@
                         </a>
                     </dd>
                 {% endif %}
-            {% endfor %}
-        </dl>
-    </section>
-    <section class="links">
-        <dl>
-            {% for project in projects %}
-                <dt>{{ project.label }}</dt>
-                <dd>
-                    <a href="https://{{ project.prefix }}{{ project.handle }}" target="_blank" rel="noopener">
-                        <span class="weak">{{ project.prefix }}</span>{{ project.handle }}
-                    </a>
-                </dd>
             {% endfor %}
         </dl>
     </section>
