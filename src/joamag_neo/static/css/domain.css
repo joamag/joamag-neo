@@ -109,6 +109,16 @@ body.mobile-s.simplified .menu {
     width: auto;
 }
 
+body.tablet-s.simplified .menu h3,
+body.mobile-s.simplified .menu h3 {
+    cursor: pointer;
+}
+
+body.tablet-s.simplified .menu.collapsed ul,
+body.mobile-s.simplified .menu.collapsed ul {
+    display: none;
+}
+
 body.simplified .menu ul {
     list-style: none;
     padding: 0px 0px 0px 0px;

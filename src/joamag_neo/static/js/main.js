@@ -16,4 +16,10 @@ jQuery(document).ready(function() {
         "If you reach this area you're probably interested in getting to know me, let's have a chat at %cjoao@joao.me.",
         cssLink.join(";")
     );
+
+    const menu = jQuery(".menu");
+    const handle = jQuery(".menu > h3");
+    handle.click(function() {
+        menu.toggleClass("collapsed");
+    });
 });
