@@ -78,7 +78,18 @@ body.simplified .header a.simple:hover {
 }
 
 body.simplified .menu {
-    margin-left: -154px;
+    backdrop-filter: saturate(180%) blur(18px);
+    -webkit-backdrop-filter: saturate(180%) blur(18px);
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 12px 12px 12px 12px;
+    -o-border-radius: 12px 12px 12px 12px;
+    -ms-border-radius: 12px 12px 12px 12px;
+    -moz-border-radius: 12px 12px 12px 12px;
+    -khtml-border-radius: 12px 12px 12px 12px;
+    -webkit-border-radius: 12px 12px 12px 12px;
+    box-sizing: border-box;
+    margin-left: -166px;
+    padding: 6px 12px 10px 12px;
     position: fixed;
     top: 70px;
     width: 150px;
@@ -86,9 +97,12 @@ body.simplified .menu {
 
 body.tablet-s.simplified .menu,
 body.mobile-s.simplified .menu {
+    left: 20px;
+    margin-left: 0px;
     right: 20px;
     text-align: right;
     top: 0px;
+    width: auto;
 }
 
 body.simplified .menu ul {
@@ -133,6 +147,10 @@ body.simplified .image-container {
 
     body.simplified {
         color: #ffffff;
+    }
+
+    body.simplified .menu {
+        background: rgba(29, 29, 29, 0.55);
     }
 
     body.simplified a {
