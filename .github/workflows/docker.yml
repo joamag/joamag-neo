@@ -30,8 +30,7 @@ jobs:
         id: set_tag
         run: |
           if [[ "${{ github.ref_name }}" == "master" ]]; then
-            VERSION=$(grep -A 1 "def _version" src/joamag_neo/main.py | grep return | sed 's/.*"\(.*\)".*/\1/')
-            echo "tag=$VERSION" >> $GITHUB_OUTPUT
+            echo "tag=latest" >> $GITHUB_OUTPUT
           else
             GITHUB_REFNAME=${{ github.ref_name }}
             BRANCH_NAME=${GITHUB_REFNAME//\//_}
@@ -48,6 +47,15 @@ jobs:
           tags: joamag/joamag_neo:${{ steps.set_tag.outputs.tag }}
           provenance: true
           sbom: true
+
+      - name: Trigger joamag-neo-latest deployment
+        if: github.event_name == 'push' && github.ref_name == 'master'
+        uses: hivesolutions/deploy-action@v1
+        with:
+          repository: hivesolutions/infra-bemisc
+          service: joamag-neo-latest
+          group: personal
+          token: ${{ secrets.INFRA_DEPLOY_PAT }}
 
       - name: Trigger joamag-neo deployment
         if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/')
