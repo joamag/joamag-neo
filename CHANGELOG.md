@@ -9,11 +9,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+*
+
+### Changed
+
+*
+
+### Fixed
+
+*
+
+## [1.6.0] - 2026-08-24
+
+### Added
+
 * Side menu can now be collapsed on mobile
 
 ### Changed
 
-* Side menu now sits on a blurred translucent background
+* Side menu now sits on a translucent background
 
 ### Fixed
 
