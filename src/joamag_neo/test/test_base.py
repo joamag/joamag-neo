@@ -27,6 +27,8 @@ class BaseTest(unittest.TestCase):
 
     def test_index_secure(self):
         self.assertEqual(self.index.find('href="http://'), -1)
+        self.assertEqual(self.index.find('href="//'), -1)
+        self.assertEqual(self.index.find('src="//'), -1)
 
         unsafe = re.findall('target="_blank"(?![^>]*rel="noopener")', self.index)
         self.assertEqual(len(unsafe), 0)
@@ -43,6 +45,22 @@ class BaseTest(unittest.TestCase):
         )
         self.assertEqual(self.index.find("?subject=Hey João"), -1)
 
+    def test_index_name(self):
+        self.assertNotEqual(self.index.find("<h1>João Magalhães</h1>"), -1)
+        self.assertNotEqual(self.index.find("<title>João Magalhães</title>"), -1)
+
+        appier.conf_s("NAME", "Joao Magalhaes")
+        try:
+            result = self.app.template(
+                "index.html.tpl", mode="simplified narrow center"
+            )
+        finally:
+            appier.conf_r("NAME")
+
+        self.assertNotEqual(result.find("<h1>Joao Magalhaes</h1>"), -1)
+        self.assertNotEqual(result.find("<title>Joao Magalhaes</title>"), -1)
+        self.assertNotEqual(result.find('name="author" content="Joao Magalhaes"'), -1)
+
     def test_index_socials(self):
         self.assertNotEqual(self.index.find('href="https://github.com/joamag"'), -1)
         self.assertNotEqual(self.index.find('href="https://gitlab.com/joamag"'), -1)
@@ -56,6 +74,20 @@ class BaseTest(unittest.TestCase):
         self.assertNotEqual(self.index.find('href="https://keybase.io/joamag"'), -1)
         self.assertNotEqual(self.index.find('href="https://resume.joao.me"'), -1)
         self.assertEqual(self.index.find('href="https://twitter.com/joamag"'), -1)
+
+        appier.conf_s("TWITTER", "joaomagalhaes")
+        try:
+            result = self.app.template(
+                "index.html.tpl", mode="simplified narrow center"
+            )
+        finally:
+            appier.conf_r("TWITTER")
+
+        self.assertNotEqual(result.find('href="https://x.com/joaomagalhaes"'), -1)
+        self.assertNotEqual(
+            result.find('name="twitter:site" content="@joaomagalhaes"'), -1
+        )
+        self.assertEqual(result.find('href="https://x.com/joamag"'), -1)
 
     def test_index_projects(self):
         self.assertNotEqual(
@@ -119,11 +151,14 @@ class BaseTest(unittest.TestCase):
 
     def test_index_preconnect(self):
         self.assertNotEqual(
-            self.index.find('<link rel="preconnect" href="https://libs.bemisc.com"'), -1
+            self.index.find(
+                '<link rel="preconnect" href="https://libs.bemisc.com" crossorigin />'
+            ),
+            -1,
         )
         self.assertNotEqual(
             self.index.find(
-                '<link rel="preconnect" href="https://ajax.googleapis.com"'
+                '<link rel="preconnect" href="https://ajax.googleapis.com" />'
             ),
             -1,
         )
@@ -169,3 +204,12 @@ class BaseTest(unittest.TestCase):
         )
         self.assertNotEqual(result.find("joao@joao.me"), -1)
         self.assertEqual(result.find("Amplemarket"), -1)
+
+    def test_llms_route(self):
+        result = self.app.get("/llms.txt")
+
+        self.assertEqual(result.code, 200)
+        self.assertEqual(result.headers.get("Content-Type"), "text/plain")
+        self.assertEqual(
+            result.data.startswith("# João Magalhães".encode("utf-8")), True
+        )
