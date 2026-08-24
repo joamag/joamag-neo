@@ -9,6 +9,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+*
+
+### Changed
+
+*
+
+### Fixed
+
+*
+
+## [1.4.0] - 2026-08-24
+
+### Added
+
 * Structured data to improve search engine and AI discovery
 * Bluesky, Keybase and résumé links in the contacts list
 * Projects list featuring Appier, Netius, Colony and Boytacean
