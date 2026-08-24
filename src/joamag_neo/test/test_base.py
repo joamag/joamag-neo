@@ -68,11 +68,7 @@ class BaseTest(unittest.TestCase):
             self.index.find('href="https://linkedin.com/in/joamag"'), -1
         )
         self.assertNotEqual(self.index.find('href="https://x.com/joamag"'), -1)
-        self.assertNotEqual(
-            self.index.find('href="https://bsky.app/profile/joamag.bsky.social"'), -1
-        )
-        self.assertNotEqual(self.index.find('href="https://keybase.io/joamag"'), -1)
-        self.assertNotEqual(self.index.find('href="https://resume.joao.me"'), -1)
+        self.assertNotEqual(self.index.find('href="https://joamag.bsky.social"'), -1)
         self.assertEqual(self.index.find('href="https://twitter.com/joamag"'), -1)
 
         appier.conf_s("TWITTER", "joaomagalhaes")
@@ -88,20 +84,6 @@ class BaseTest(unittest.TestCase):
             result.find('name="twitter:site" content="@joaomagalhaes"'), -1
         )
         self.assertEqual(result.find('href="https://x.com/joamag"'), -1)
-
-    def test_index_projects(self):
-        self.assertNotEqual(
-            self.index.find('href="https://github.com/hivesolutions/appier"'), -1
-        )
-        self.assertNotEqual(
-            self.index.find('href="https://github.com/hivesolutions/netius"'), -1
-        )
-        self.assertNotEqual(
-            self.index.find('href="https://github.com/hivesolutions/colony"'), -1
-        )
-        self.assertNotEqual(
-            self.index.find('href="https://github.com/joamag/boytacean"'), -1
-        )
 
     def test_index_description(self):
         self.assertNotEqual(
@@ -181,6 +163,10 @@ class BaseTest(unittest.TestCase):
     def test_blog(self):
         result = self.app.template("blog.html.tpl", mode="simplified narrow center")
 
+        self.assertNotEqual(result.find('<section class="header">'), -1)
+        self.assertNotEqual(result.find("<h1>Blog</h1>"), -1)
+        self.assertNotEqual(result.find('<p class="condensed">'), -1)
+        self.assertNotEqual(result.find("<title>João Magalhães - Blog</title>"), -1)
         self.assertNotEqual(result.find('<section class="blog">'), -1)
         self.assertNotEqual(
             result.find('rel="noopener" href="https://resume.joao.me"'), -1
@@ -192,6 +178,28 @@ class BaseTest(unittest.TestCase):
 
         self.assertNotEqual(result.find('<section class="title">'), -1)
         self.assertNotEqual(result.find('<script type="application/ld+json">'), -1)
+
+    def test_projects(self):
+        result = self.app.template("projects.html.tpl", mode="simplified narrow center")
+
+        self.assertNotEqual(result.find("<h1>Projects</h1>"), -1)
+        self.assertNotEqual(result.find('<p class="condensed">'), -1)
+        self.assertNotEqual(
+            result.find("github.com/hivesolutions/appier, since 2013"), -1
+        )
+        self.assertNotEqual(result.find("github.com/joamag/boytacean, since 2022"), -1)
+        self.assertNotEqual(
+            result.find(
+                "WSGI &amp; ASGI Python web framework, with batteries included"
+            ),
+            -1,
+        )
+
+    def test_projects_route(self):
+        result = self.app.get("/projects")
+
+        self.assertEqual(result.code, 200)
+        self.assertNotEqual(result.data.find("<h1>Projects</h1>".encode("utf-8")), -1)
 
     def test_llms(self):
         result = self.app.template("llms.txt.tpl", content_type="text/plain")
